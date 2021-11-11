@@ -6,7 +6,10 @@ import Register from '../Buttons/Register';
 function Nav() {
     const[sidNav, setSideNav] = useState(false);
     return (
+        // Navbar
         <div className="navigation">
+
+            {/* Large screen view */}
             <div className="largeScreen flex lg:hidden">
                 <div className="navLeft flex items-center justify-between w-8/12">
                     <div className="logo">
@@ -33,6 +36,7 @@ function Nav() {
                 </div>
             </div>
 
+            {/* Small screen view */}
             <div className="smallScreen hidden lg:block">
                 <div className="flex items-center">
                     <div className="small-left w-3/12">
@@ -54,6 +58,7 @@ function Nav() {
                 </div>
             </div>
 
+            {/* Sidebar view */}
             <div className="hidden lg:block">
                 <div className="sidbar fixed" style={{display: sidNav ? "block" : "none", backgroundColor: "rgba(0, 0, 0, 0.4)", minWidth: "100vw", minHeight: "100vh", top: "0"}}>
                     <div className="semiSide w-2/5 bg-white" style={{minHeight: "100vh"}}>
