@@ -1,73 +1,84 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './Nav.css';
+import Login from '../Buttons/Login';
+import Register from '../Buttons/Register';
 
 function Nav() {
-    const[ans, setAns] = useState(false);
-    const[search, setSearch] = useState(false);
+    const[sidNav, setSideNav] = useState(false);
     return (
-        <div className="">
-            <div className="bg-nav flex justify-between py-4 px-8 sm:hidden" style={{backgroundColor: "#efeeea"}}>
-                <div className="left flex items-center">
-                    <img style={{width: "116px", height: "27px", cursor: "pointer"}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAAAzCAMAAAC5WfRSAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAu5QTFRFAAAAFBQUFBQUExMTFRUVFBQUFBQUFBQUFRUVFBQUJCQkExMTFBQUFBQUFBQUEhISExMTFRUVFBQUExMTGBgYFhYWFBQUFxcXFBQUFBQUFBQUFBQUFRUVAAAAFBQUFBQUGhoaFBQUFBQUFRUVFRUVFBQUExMTFBQUDg4OFBQUFBQUFhYWEhISFBQUExMTFBQUFRUVFhYWEhISExMTFRUVERERFBQUFBQUAAAAFRUVAAAAExMTFBQUAAAAFBQUERERFBQUFBQUFRUVFBQUFBQUFRUVFRUVFBQUExMTICAgFRUVFRUVExMTFRUVExMTExMTFBQUFBQUFBQUFRUVFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUFRUVAAAAAAAAFBQUFBQUFRUVHBwcFxcXFBQUExMTGhoaFBQUFRUVFBQUFBQUFBQUFRUVFBQUFBQUFBQUFBQUExMTFRUVFBQUFRUVFhYWFBQUFBQUFBQUFBQUFxcXFBQUFBQUGBgYFBQUExMTFBQUFBQUFBQUFBQUExMTERERFBQUExMTFBQUFRUVFBQUFBQUFRUVFBQUFBQUFBQUEhISFBQUFRUVFBQUFBQUFBQUFBQUFBQUFRUVExMTFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUExMTFBQUEBAQFBQUDw8PEhISFBQUEhISFBQUFBQUEhISEhISFRUVFBQUExMTExMTFBQUFxcXExMTExMTFBQUFBQUExMTFRUVEBAQFBQUFRUVFRUVFBQUFBQUExMTExMTFBQUFBQUFhYWExMTFBQUFBQUFBQUExMTFBQUExMTFBQUFBQUFBQUFBQUExMTFRUVFRUVFRUVFBQUFBQUFBQUFRUVFBQUFRUVFBQUFRUVFBQUFhYWFBQUFBQUFRUVFBQUFBQUFRUVFRUVFBQUFRUVFBQUFxcXExMTFhYWFBQUExMTFhYWFBQUFRUVDQ0NExMTEhISFBQUFBQUFBQUJjGAOgAAAPp0Uk5TACf0Xa7/5hlJqAfSWnHqHRvsnF4gOvwhsvL1wTECxLMKzOVhY0xsgRLj7S8qZ4WLVUc4UlYs92UDhgGerwWX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" alt="" />
-                    <div className="mx-4 px-4 py-1 flex items-center" style={{border: "1px solid black", borderRadius: "60px", cursor: "pointer"}}>
+        <div className="navigation">
+            <div className="largeScreen flex lg:hidden">
+                <div className="navLeft flex items-center justify-between w-8/12">
+                    <div className="logo">
+                        <img src="nft-logo.png" alt="" />
+                    </div>
+                    <div className="search_box flex items-center">
+                        <img src="search.png" alt="" />
+                        <form action="/">
+                            <input type="text" placeholder="Search"/>
+                        </form>
+                    </div>
+                    <div className="discover px-4">
                         Discover
                     </div>
-                    <div className="mx-4 px-4 py-1 flex items-center" style={{border: "1px solid transparent", borderRadius: "60px", color: "#6c6c6a", cursor: "pointer"}}>
+                    <div className="creator px-4">
                         Creators
                     </div>
-                    <div className="mx-4 px-4 py-1 flex items-center" style={{border: "1px solid transparent", borderRadius: "60px", color: "#6c6c6a", cursor: "pointer"}}>
-                        Collectors
-                    </div>
                 </div>
-                <div className="right flex items-center">
-                    <div className="bg-white w-10 h-10 justify-center items-center mr-4" style={{borderRadius: "50%", display: search ? "none" : "flex"}}  onClick={() => setAns(!ans)}>
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div className="md:hidden" style={{backgroundImage: "linear-gradient(to right, #568dd3, #3a82e2, #2374ef, #2764f8, #434efc, #7240f4, #932deb, #ad00df, #c900cc, #dd00ba, #ec00a9, #f60b9a)", borderRadius: "60px", padding: "2px"}}>
-                        <div className="px-4 py-2" style={{backgroundColor: "#efeeea", borderRadius: "60px"}}>
-                            Connect Wallet
-                        </div>
+                <div className="navRight w-4/12 pr-4 flex items-center justify-end">
+                    <div className="mt-8">
+                        <Login />
+                        <Register />
                     </div>
                 </div>
             </div>
 
-            <div className="sm-nav sm:block hidden">
-                <div className="flex py-8 px-4 justify-between">
-                    <div className="left flex gap-4">
-                        <div onClick={() => setAns(!ans)}>
-                            <i class="fas fa-2x fa-bars"></i>
-                        </div>
-                        <div>
-                            <img style={{width: "116px", height: "27px", cursor: "pointer"}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAAAzCAMAAAC5WfRSAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAu5QTFRFAAAAFBQUFBQUExMTFRUVFBQUFBQUFBQUFRUVFBQUJCQkExMTFBQUFBQUFBQUEhISExMTFRUVFBQUExMTGBgYFhYWFBQUFxcXFBQUFBQUFBQUFBQUFRUVAAAAFBQUFBQUGhoaFBQUFBQUFRUVFRUVFBQUExMTFBQUDg4OFBQUFBQUFhYWEhISFBQUExMTFBQUFRUVFhYWEhISExMTFRUVERERFBQUFBQUAAAAFRUVAAAAExMTFBQUAAAAFBQUERERFBQUFBQUFRUVFBQUFBQUFRUVFRUVFBQUExMTICAgFRUVFRUVExMTFRUVExMTExMTFBQUFBQUFBQUFRUVFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUFRUVAAAAAAAAFBQUFBQUFRUVHBwcFxcXFBQUExMTGhoaFBQUFRUVFBQUFBQUFBQUFRUVFBQUFBQUFBQUFBQUExMTFRUVFBQUFRUVFhYWFBQUFBQUFBQUFBQUFxcXFBQUFBQUGBgYFBQUExMTFBQUFBQUFBQUFBQUExMTERERFBQUExMTFBQUFRUVFBQUFBQUFRUVFBQUFBQUFBQUEhISFBQUFRUVFBQUFBQUFBQUFBQUFBQUFRUVExMTFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUExMTFBQUEBAQFBQUDw8PEhISFBQUEhISFBQUFBQUEhISEhISFRUVFBQUExMTExMTFBQUFxcXExMTExMTFBQUFBQUExMTFRUVEBAQFBQUFRUVFRUVFBQUFBQUExMTExMTFBQUFBQUFhYWExMTFBQUFBQUFBQUExMTFBQUExMTFBQUFBQUFBQUFBQUExMTFRUVFRUVFRUVFBQUFBQUFBQUFRUVFBQUFRUVFBQUFRUVFBQUFhYWFBQUFBQUFRUVFBQUFBQUFRUVFRUVFBQUFRUVFBQUFxcXExMTFhYWFBQUExMTFhYWFBQUFRUVDQ0NExMTEhISFBQUFBQUFBQUJjGAOgAAAPp0Uk5TACf0Xa7/5hlJqAfSWnHqHRvsnF4gOvwhsvL1wTECxLMKzOVhY0xsgRLj7S8qZ4WLVUc4UlYs92UDhgGerwWX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" alt="" />
+            <div className="smallScreen hidden lg:block">
+                <div className="flex items-center">
+                    <div className="small-left w-3/12">
+                        <div className="logo">
+                            <img className="w-40" src="nft-logo.png" alt="" />
                         </div>
                     </div>
-                    <div className="right">
-                        <div className="bg-white w-10 h-10 flex justify-center items-center mr-4" style={{borderRadius: "50%"}}>
-                            <i class="fas fa-search"></i>
+                    <div className="small-mid w-8/12 flex justify-center mt-4">
+                        <div className="search_box flex items-center">
+                            <img src="search.png" alt="" />
+                            <form action="/">
+                                <input type="text" placeholder="Search"/>
+                            </form>
                         </div>
+                    </div>
+                    <div className="small-right w-1/12 flex justify-center mt-4" onClick={() => setSideNav(!sidNav)}>
+                        <i className="fas fa-bars" style={{fontSize: "20px"}}></i>
                     </div>
                 </div>
             </div>
 
-            <div className="hidden sm:block">
-                <div className="sm-menu fixed min-h-full min-w-full top-0" style={{display: ans ? "block" : "none", backgroundColor: "rgba(0, 0, 0, 0.4)"}}>
-                    <div className="left w-1/2 bg-white px-4 min-h-screen pt-4">
-                        <div className="flex justify-between mb-8">
-                            <img style={{width: "116px", height: "27px", cursor: "pointer"}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAAAzCAMAAAC5WfRSAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAu5QTFRFAAAAFBQUFBQUExMTFRUVFBQUFBQUFBQUFRUVFBQUJCQkExMTFBQUFBQUFBQUEhISExMTFRUVFBQUExMTGBgYFhYWFBQUFxcXFBQUFBQUFBQUFBQUFRUVAAAAFBQUFBQUGhoaFBQUFBQUFRUVFRUVFBQUExMTFBQUDg4OFBQUFBQUFhYWEhISFBQUExMTFBQUFRUVFhYWEhISExMTFRUVERERFBQUFBQUAAAAFRUVAAAAExMTFBQUAAAAFBQUERERFBQUFBQUFRUVFBQUFBQUFRUVFRUVFBQUExMTICAgFRUVFRUVExMTFRUVExMTExMTFBQUFBQUFBQUFRUVFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUFRUVAAAAAAAAFBQUFBQUFRUVHBwcFxcXFBQUExMTGhoaFBQUFRUVFBQUFBQUFBQUFRUVFBQUFBQUFBQUFBQUExMTFRUVFBQUFRUVFhYWFBQUFBQUFBQUFBQUFxcXFBQUFBQUGBgYFBQUExMTFBQUFBQUFBQUFBQUExMTERERFBQUExMTFBQUFRUVFBQUFBQUFRUVFBQUFBQUFBQUEhISFBQUFRUVFBQUFBQUFBQUFBQUFBQUFRUVExMTFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUFBQUExMTFBQUFBQUExMTFBQUEBAQFBQUDw8PEhISFBQUEhISFBQUFBQUEhISEhISFRUVFBQUExMTExMTFBQUFxcXExMTExMTFBQUFBQUExMTFRUVEBAQFBQUFRUVFRUVFBQUFBQUExMTExMTFBQUFBQUFhYWExMTFBQUFBQUFBQUExMTFBQUExMTFBQUFBQUFBQUFBQUExMTFRUVFRUVFRUVFBQUFBQUFBQUFRUVFBQUFRUVFBQUFRUVFBQUFhYWFBQUFBQUFRUVFBQUFBQUFRUVFRUVFBQUFRUVFBQUFxcXExMTFhYWFBQUExMTFhYWFBQUFRUVDQ0NExMTEhISFBQUFBQUFBQUJjGAOgAAAPp0Uk5TACf0Xa7/5hlJqAfSWnHqHRvsnF4gOvwhsvL1wTECxLMKzOVhY0xsgRLj7S8qZ4WLVUc4UlYs92UDhgGerwWX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" alt="" />
-                            <div className="cut" onClick={() => setAns(!ans)}>
-                                <i class="fas fa-2x fa-times" style={{color: "#8c8c8c"}}></i>
+            <div className="hidden lg:block">
+                <div className="sidbar fixed" style={{display: sidNav ? "block" : "none", backgroundColor: "rgba(0, 0, 0, 0.4)", minWidth: "100vw", minHeight: "100vh", top: "0"}}>
+                    <div className="semiSide w-2/5 bg-white" style={{minHeight: "100vh"}}>
+                        <div className="logo flex justify-between px-4 items-center">
+                            <img className="w-4/5" src="nft-logo.png" alt="" />
+                            <div className="w-1/5">
+                                <i className="fas fa-times" style={{fontSize: "30px"}} onClick={() => setSideNav(!sidNav)}></i>
                             </div>
                         </div>
-                        <div className="my-4 px-6 py-2 mr-4" style={{backgroundColor: "#e4e4e4", borderRadius: "40px"}}>
-                            Discover
+                        <div className="pt-20 pb-20">
+                            <div className="discover px-4 py-4 text-center">
+                                Discover
+                            </div>
+                            <div className="creator px-4 py-4 text-center">
+                                Creators
+                            </div>
                         </div>
-                        <div className="my-4 px-6 py-2 mr-4" style={{backgroundColor: "#FFF", borderRadius: "40px"}}>
-                            Creators
+                        <div className="flex justify-center">
+                            <Login />
                         </div>
-                        <div className="my-4 px-6 py-2 mr-4" style={{backgroundColor: "#FFF", borderRadius: "40px"}}>
-                            Collectors
+                        <div className="flex justify-center">
+                            <Register />
                         </div>
                     </div>
-                    <div className="right w-1/2" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
+                    <div className="w-3/5">
 
                     </div>
                 </div>
