@@ -30,7 +30,7 @@ function Nav() {
                 </div>
                 <div className="navRight w-4/12 pr-4 flex items-center justify-end">
                     <div className="mt-8">
-                        <Login />
+                        <Login back={"#000000"} color={"#FFF"} />
                         <Register />
                     </div>
                 </div>
@@ -59,7 +59,7 @@ function Nav() {
             </div>
 
             {/* Sidebar view */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block relative" style={{zIndex: "999"}}>
                 <div className="sidbar fixed" style={{display: sidNav ? "block" : "none", backgroundColor: "rgba(0, 0, 0, 0.4)", minWidth: "100vw", minHeight: "100vh", top: "0"}}>
                     <div className="semiSide w-2/5 bg-white" style={{minHeight: "100vh"}}>
                         <div className="logo flex justify-between px-4 items-center">
@@ -77,7 +77,7 @@ function Nav() {
                             </div>
                         </div>
                         <div className="flex justify-center">
-                            <Login />
+                        <Login back={"#000000"} color={"#FFF"} />
                         </div>
                         <div className="flex justify-center">
                             <Register />
@@ -88,6 +88,7 @@ function Nav() {
                     </div>
                 </div>
             </div>
+            <div className="mx-auto w-10/12 py-4" style={{borderBottom: "1px solid #C2C2C2"}}></div>
         </div>
     )
 }

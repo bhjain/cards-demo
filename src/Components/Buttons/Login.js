@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Login.css';
 
-function Login() {
+function Login({back, color}) {
     return (
         <div>
-            <div className="login w-40 h-10 flex items-center justify-center md:w-28 md:h-8">
-                <button>Log In</button>
+            <div className="login w-40 h-10 flex items-center justify-center md:w-28 md:h-8" style={{backgroundColor: `${back}`, color: `${color}`}}>
+                <button className="font-bold">Log In</button>
             </div>
         </div>
     )
