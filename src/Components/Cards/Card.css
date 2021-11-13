@@ -1,0 +1,11 @@
+.singleCard{
+    background: #FFFEFE;
+    border: 1px solid rgba(255, 255, 10, 0.05);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.price{
+    border-right: 1px solid #C4C4C4;
+}
