@@ -19,7 +19,7 @@ function Nav() {
           </div>
           <div className="search_box flex items-center">
             <img src="search.png" alt="" />
-            <form action="/">
+            <form action="/" style={{ height: "1rem" }}>
               <input type="text" placeholder="Search" />
             </form>
           </div>
@@ -84,7 +84,7 @@ function Nav() {
               <div className="w-1/5">
                 <i
                   className="fas fa-times"
-                  style={{ fontSize: "30px" }}
+                  style={{ fontSize: "15px",border:"1px solid grey",borderRadius:"2px" }}
                   onClick={() => setSideNav(!sidNav)}
                 ></i>
               </div>
