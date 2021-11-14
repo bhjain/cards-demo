@@ -1,6 +1,6 @@
 .login_form{
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow:2px 3px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .log_form_left{
@@ -16,4 +16,8 @@
 
 input:focus{
     outline: none;
+}
+.google_sign_in{
+    border: 1px solid grey;
+    border-radius: 5px; 
 }

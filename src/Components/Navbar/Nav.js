@@ -11,13 +11,13 @@ function Nav() {
 
   useEffect(() => {
     setLogStatus(localStorage.getItem("login"));
-  }, [])
+  }, []);
 
   // console.log(logStatus);
 
   return (
     // Navbar
-    <div className="navigation">
+    <div className="navigation" style={{backgroundColor:"#E5E5E5"}}>
       {/* Large screen view */}
       <div className="largeScreen flex lg:hidden">
         <div className="navLeft flex items-center justify-between w-8/12">
@@ -32,11 +32,17 @@ function Nav() {
               <input type="text" placeholder="Search" />
             </form>
           </div>
-          <div className="discover px-4">Discover</div>
+          <Link to="/discover">
+            <div className="discover px-4">Discover</div>
+          </Link>
+
           <div className="creator px-4">Creators</div>
         </div>
         <div className="navRight w-4/12 pr-4 flex items-center justify-end">
-          <div className="mt-8" style={{display: logStatus === "true" ? "none" : "block"}}>
+          <div
+            className="mt-8"
+            style={{ display: logStatus === "true" ? "none" : "block" }}
+          >
             <Link to="/login">
               <Login back={"#000000"} color={"#FFF"} />
             </Link>
@@ -44,13 +50,14 @@ function Nav() {
               <Register />
             </Link>
           </div>
-          <div className="mt-8 items-center gap-8" style={{display: logStatus === "true" ? "flex" : "none"}}>
+          <div
+            className="mt-8 items-center gap-8"
+            style={{ display: logStatus === "true" ? "flex" : "none" }}
+          >
             <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
             <div>
               <img src="user.png" alt="" />
-              <div className="userprice text-center mt-4">
-              $$: Rs 200
-              </div>
+              <div className="userprice text-center mt-4">$$: Rs 200</div>
             </div>
           </div>
         </div>
@@ -102,16 +109,23 @@ function Nav() {
               <div className="w-1/5">
                 <i
                   className="fas fa-times"
-                  style={{ fontSize: "15px",border:"1px solid grey",borderRadius:"2px" }}
+                  style={{
+                    fontSize: "15px",
+                    border: "1px solid grey",
+                    borderRadius: "2px",
+                  }}
                   onClick={() => setSideNav(!sidNav)}
                 ></i>
               </div>
             </div>
             <div className="pt-20 pb-20">
-              <div className="discover px-4 py-4 text-center">Discover</div>
+              <Link to="/discover">
+                <div className="discover px-4 py-4 text-center">Discover</div>
+              </Link>
+              <Link to="/creator"></Link>
               <div className="creator px-4 py-4 text-center">Creators</div>
             </div>
-            <div style={{display: logStatus === "true" ? "none" : "block"}}>
+            <div style={{ display: logStatus === "true" ? "none" : "block" }}>
               <div className="flex justify-center">
                 <Login back={"#000000"} color={"#FFF"} />
               </div>
@@ -119,7 +133,10 @@ function Nav() {
                 <Register />
               </div>
             </div>
-            <div className="mt-8 items-center gap-8 mx-auto relative" style={{display: logStatus === "true" ? "block" : "none"}}>
+            <div
+              className="mt-8 items-center gap-8 mx-auto relative"
+              style={{ display: logStatus === "true" ? "block" : "none" }}
+            >
               <div className="flex justify-center">
                 <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
               </div>
@@ -128,7 +145,7 @@ function Nav() {
                   <img src="user.png" alt="" />
                 </div>
                 <div className="userprice text-center mt-4 w-1/2 mx-auto">
-                $$: Rs 200
+                  $$: Rs 200
                 </div>
               </div>
             </div>

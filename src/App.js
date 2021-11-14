@@ -16,12 +16,14 @@ function App() {
     <BrowserRouter>
       <Nav />
       <Routes>
+        {/* <div style={{backgroundColor:"black"}}> */}
         <Route path="/" element={<Main />} />
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register2" element={<Register2 />} />
         <Route path="/discover" element={<Discover />} />
+      {/* </div> */}
       </Routes>
       <Footer />
     </BrowserRouter>

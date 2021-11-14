@@ -102,7 +102,8 @@ function Discover() {
                     <button className="font-light">Sort By <span className="font-bold">Recently Aded</span></button>
                 </div>
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-2 justify-between gap-14 mx-20 my-8 sm:grid-cols-1">
+            <div style={{display:"flex",justifyContent:"center"}}>
+            <div className="grid grid-cols-3 md:grid-cols-2 justify-between gap-14  my-8 sm:grid-cols-1" style={{width:"80%"}}>
                 {/* <Card props={card1} />
                 <Card props={card1} />
                 <Card props={card1} />
@@ -115,6 +116,7 @@ function Discover() {
                         <Card props={element} />
                     ))
                 }
+            </div>
             </div>
         </div>
     )
