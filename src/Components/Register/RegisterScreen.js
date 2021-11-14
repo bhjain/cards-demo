@@ -7,7 +7,7 @@ import Nav from "../Navbar/Nav";
 
 function RegisterScreen() {
   return (
-    <div>
+    <div className="fade-up">
       {/* <Nav /> */}
       <div
         className="flex justify-center items-center pt-10 pb-20"

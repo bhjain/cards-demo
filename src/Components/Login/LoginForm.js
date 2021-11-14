@@ -6,7 +6,7 @@ import Login from "../Buttons/Login";
 function LoginForm() {
   return (
     <div
-      className="flex justify-center  md:items-start items-center pt-10 pb-20 md:pb-10 "
+      className="flex justify-center  md:items-start items-center pt-10 pb-20 md:pb-10 fade-up"
       style={{ minHeight: "90vh" }}
     >
       <div className="login_form w-4/5 flex md:flex-col rounded-3xl md:w-11/12">

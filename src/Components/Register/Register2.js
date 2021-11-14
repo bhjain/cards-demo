@@ -10,7 +10,7 @@ function Register2() {
     <div>
       {/* <Nav /> */}
       <div
-        className="flex justify-center md:items-start items-center  pt-10 md:pb-0  pb-20"
+        className="flex justify-center md:items-start items-center  pt-10 md:pb-0  pb-20 fade-up"
         style={{ minHeight: "90vh" }}
       >
         <div className="login_form w-4/5 flex md:flex-col rounded-3xl md:w-11/12">
