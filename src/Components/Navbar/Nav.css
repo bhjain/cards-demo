@@ -4,10 +4,50 @@
 
 .search_box{
     display: flex;
-    width: 261px;
-    height: 45px;
     border-radius: 30px;
+    height: 32%;
+    width: 64%;
     border: 1px solid #D8D8D8;
+    background-color: #FFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+    animation: search 0.4s linear;
+}
+
+@keyframes search{
+    from{
+        width: 10%;
+    }
+    to{
+        width: 60%;
+    }
+}
+
+.user_prof{
+    width: "30%";
+}
+
+.sm_search_box{
+    display: flex;
+    border-radius: 30px;
+    height: 32%;
+    border: 1px solid #D8D8D8;
+    background-color: #FFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+    animation: smSearch 0.4s linear;
+}
+
+@keyframes smSearch{
+    from{
+        width: 10%;
+    }
+    to{
+        width: 60%;
+    }
+}
+
+.roundSearch{
     background-color: #FFF;
     box-sizing: border-box;
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
@@ -23,9 +63,20 @@
 .search_box input{
     /* padding-left: 14px; */
     padding-left: 28px;
+    width: 58%;
+    /* animation: searchInput 5s linear; */
 }
 
 .search_box input:focus{
+    outline: none;
+}
+
+.sm_search_box input{
+    padding-left: 28px;
+    width: 78%;   
+}
+
+.sm_search_box input:focus{
     outline: none;
 }
 
@@ -49,16 +100,17 @@
 }
 
 .semiSide{
+    right: 0;
     position: absolute;
     animation: sliding 1s;
 }
 
 @keyframes sliding{
     from{
-        left: -200px;
+        right: -200px;
     }
     to{
-        left: 0px;
+        right: 0px;
     }
 }
 
