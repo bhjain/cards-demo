@@ -10,7 +10,7 @@ function Register2() {
     <div>
       {/* <Nav /> */}
       <div
-        className="flex justify-center items-center pt-10 pb-20"
+        className="flex justify-center md:items-start items-center  pt-10 md:pb-0  pb-20 fade-up"
         style={{ minHeight: "90vh" }}
       >
         <div className="login_form w-4/5 flex md:flex-col rounded-3xl md:w-11/12">
@@ -32,7 +32,7 @@ function Register2() {
             </div>
             <div className="pb-8 hidden md:block" style={{ zIndex: "1" }}>
               <img
-                className="relative float-right w-2/5 -left-10 top-4"
+                className="relative float-right w-2/5 sm:-left-10 md:-left-20  top-4"
                 src="login_1.png"
                 alt="login_1"
                 style={{ zIndex: "8" }}
@@ -54,7 +54,8 @@ function Register2() {
               Turn Your Ideas Into Reality
             </h4>
           </div>
-          <div className="log_form_right w-1/2 md:w-full pl-8 py-8 md:pl-2 md:pt-4">
+          <div className="log_form_right w-1/2  md:w-full pl-8 py-8 md:pl-2 md:pt-4">
+            {/* <div className="w-11/12 mx-auto my-10 md:w-full md:px-2 md:my-4"> */}
             <h4
               className="md:hidden"
               style={{ fontSize: "2vw", fontWeight: "900" }}
@@ -64,23 +65,30 @@ function Register2() {
             <h4 className="hidden md:block font-bold text-lg text-center">
               Sign Up
             </h4>
-            <p className="my-14 text-center md:my-6">Sign In With Google</p>
+            <p className="my-14 text-center md:my-6 md:w-full w-4/5">
+              Sign In With Google
+            </p>
             <p
-              className="text-center md:hidden"
+              className="text-center md:hidden md:w-full w-4/5"
               style={{ color: "#C4C4C4", fontSize: "2vw", fontWeight: "900" }}
             >
               Or
             </p>
             <h4
-              className="hidden md:block font-bold text-lg text-center"
+              className="hidden md:block font-bold text-lg text-center "
               style={{ color: "#C4C4C4" }}
             >
-              Or
+              Or5
             </h4>
             <div className="w-11/12 mx-auto my-10 md:w-full md:px-2 md:my-4">
+              {/* <p className="my-14 w-4/5 text-center md:my-6">Sign In With Google</p> */}
               <form action="/">
                 <div className="md:text-center">
-                  <label style={{ fontWeight: "900" }} htmlFor="">
+                  <label
+                    style={{ fontWeight: "900" }}
+                    htmlFor=""
+                    className="hidden-mobile"
+                  >
                     Password <span>*</span>{" "}
                   </label>
                   <br />
@@ -92,8 +100,12 @@ function Register2() {
                     placeholder="Password"
                   />
                 </div>
-                <div className="mt-4 md:text-center">
-                  <label style={{ fontWeight: "900" }} htmlFor="">
+                <div className="md:mt-0 mt-4 md:text-center">
+                  <label
+                    style={{ fontWeight: "900" }}
+                    htmlFor=""
+                    className="hidden-mobile"
+                  >
                     Re-Type Password <span>*</span>{" "}
                   </label>
                   <br />
@@ -105,7 +117,7 @@ function Register2() {
                     placeholder="Password"
                   />
                 </div>
-                <div className="mt-4 md:text-center text-center">
+                <div className="mt-4 md:text-center text-center md:w-full w-4/5">
                   <input
                     className="mr-4"
                     type="checkbox"

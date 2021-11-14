@@ -6,7 +6,7 @@ import Login from "../Buttons/Login";
 function LoginForm() {
   return (
     <div
-      className="flex justify-center items-center pt-10 pb-20"
+      className="flex justify-center  md:items-start items-center pt-10 pb-20 md:pb-10 fade-up"
       style={{ minHeight: "90vh" }}
     >
       <div className="login_form w-4/5 flex md:flex-col rounded-3xl md:w-11/12">
@@ -28,13 +28,16 @@ function LoginForm() {
           </div>
           <div className="pb-8 hidden md:block" style={{ zIndex: "1" }}>
             <img
-              className="relative float-right w-2/5 -left-10 top-4"
+              // className="relative float-right w-2/5 -left-10 top-4"
+              className="relative float-right w-2/5 sm:-left-10 md:-left-20  top-4"
               src="login_1.png"
               alt="login_1"
               style={{ zIndex: "8" }}
             />
             <img
               className="relative pl-8 w-1/3 left-20 top-10 "
+              // className="relative pl-8 w-1/3 left-20 top-10 "
+
               src="login_2.png"
               alt="login_2"
             />
@@ -60,30 +63,40 @@ function LoginForm() {
           <h4 className="hidden md:block font-bold text-lg text-center">
             Log In
           </h4>
-          <p className="my-14 text-center md:my-6">Sign In With Google</p>
+          <p className="my-14 text-center md:my-6 md:w-full w-4/5  ">
+            Sign In With Google
+          </p>
           <p
-            className="text-center md:hidden"
+            className="text-center md:hidden md:w-full w-4/5"
             style={{ color: "#C4C4C4", fontSize: "2vw", fontWeight: "900" }}
           >
             Or
           </p>
           <h4
-            className="hidden md:block font-bold text-lg text-center"
+            className="hidden md:block font-bold text-lg text-center  "
             style={{ color: "#C4C4C4" }}
           >
             Or
           </h4>
-          <div className="w-11/12 mx-auto my-10 md:w-full md:px-2 md:my-4">
+          <div className="w-11/12 mx-auto my-10  md:w-full md:px-2 md:my-0">
             <form action="/">
               <div className="md:text-center">
-                <label style={{ fontWeight: "900" }} htmlFor="">
+                <label
+                  style={{ fontWeight: "900" }}
+                  htmlFor=""
+                  className="hidden-mobile"
+                >
                   Email <span>*</span>{" "}
                 </label>
                 <br />
                 <input className="w-4/5 mt-2" type="text" placeholder="Email" />
               </div>
               <div className="mt-4 md:text-center">
-                <label style={{ fontWeight: "900" }} htmlFor="">
+                <label
+                  style={{ fontWeight: "900" }}
+                  htmlFor=""
+                  className="hidden-mobile"
+                >
                   Password <span>*</span>{" "}
                 </label>
                 <br />
@@ -95,12 +108,12 @@ function LoginForm() {
                   placeholder="Password"
                 />
               </div>
-              <p className="text-right pr-28 text-xs font-bold pt-4 md:text-center md:pr-0">
+              <p className="text-right pr-40 text-xs font-bold pt-4 md:text-center md:pr-0">
                 <Link to="/register2">Forgot Password?</Link>
               </p>
             </form>
           </div>
-          <div className="flex justify-center w-4/5 md:w-full">
+          <div className="flex justify-center w-4/5 md:w-full md:my-2">
             <Login back={"#FFFF0A"} color={"#000000"} />
           </div>
           <p className="w-4/5 text-center pt-4 text-xs md:w-full">

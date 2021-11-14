@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div>
+    <div style={{ backgroundColor: "#E5E5E5" }}>
       <div className="footer md:hidden">
         <div
           className="mx-auto w-10/12"
@@ -12,7 +12,7 @@ function Footer() {
         <div className="px-8 flex justify-between items-center py-2">
           <div className="footer_left w-3/12">
             <img className="z-1" src="nft-logo.png" alt="" />
-            <p className="pl-4" style={{ fontSize: "14px" }}>
+            <p className="pl-4 " style={{ fontSize: "14px" }}>
               Yes, so please your Majesty. I did go between them, as I said; but
               more than that, he loved her-for indeed he was mad for her, and
               talk'd of Satan, and of Limbo, and of Furies, and I know not what.
@@ -53,22 +53,22 @@ function Footer() {
             <div>
               <h4 style={{ fontWeight: "900", fontSize: "18px" }}>Company</h4>
               <p>
-                <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
+                <Link to="/" style={{ fontWeight: "400", fontSize: "16px" }}>
                   Privacy Policy
                 </Link>
               </p>
               <p>
-                <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
+                <Link to="/" style={{ fontWeight: "400", fontSize: "16px" }}>
                   Terms & Conditions
                 </Link>
               </p>
               <p>
-                <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
+                <Link to="/" style={{ fontWeight: "400", fontSize: "16px" }}>
                   Community Guidelines
                 </Link>
               </p>
               <p>
-                <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
+                <Link to="/" style={{ fontWeight: "400", fontSize: "16px" }}>
                   Help
                 </Link>
               </p>
@@ -77,18 +77,21 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer_small_screen py-4 hidden md:block">
+      <div
+        className="footer_small_screen my-15 hidden md:block"
+        style={{ backgroundColor: "#E5E5E5" }}
+      >
         <div
           className="footer_left mx-auto w-4/5"
           style={{ borderTop: "1px solid #C2C2C2" }}
         >
           <img className="z-1 mx-auto" src="nft-logo.png" alt="" />
-          <p className="pl-4" style={{ fontSize: "14px" }}>
+          {/* <p className="pl-4" style={{ fontSize: "14px" }}>
             Yes, so please your Majesty. I did go between them, as I said; but
             more than that, he loved her-for indeed he was mad for her, and
             talk'd of Satan, and of Limbo, and of Furies, and I know not what.
             No, fair Princess; he is the general challenger.
-          </p>
+          </p> */}
         </div>
         <div
           className="footer_center w-4/5 text-center py-4 mx-auto my-2"
@@ -105,9 +108,9 @@ function Footer() {
             <img src="tweet_logo.png" alt="tweeter" />
           </div>
         </div>
-        <div className="footer_right w-5/5 flex justify-center">
+        <div className="footer_right w-5/5  text-center">
           {/* ------------- */}
-          <div className="w-1/2 text-center">
+          {/* <div className="w-1/2 text-center">
             <h4 style={{ fontWeight: "900", fontSize: "18px" }}>Marketplace</h4>
             <p>
               <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
@@ -124,11 +127,11 @@ function Footer() {
                 Creators
               </Link>
             </p>
-          </div>
+          </div> */}
 
           {/* ------------------ */}
-          <div className="text-center w-1/2">
-            <h4 style={{ fontWeight: "900", fontSize: "18px" }}>Company</h4>
+          <h4 style={{ fontWeight: "900", fontSize: "18px" }}>Company</h4>
+          <div className="text-center w-full flex justify-around space-x-1.5 flex-wrap">
             <p>
               <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
                 Privacy Policy

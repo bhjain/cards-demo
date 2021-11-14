@@ -7,11 +7,11 @@ import Nav from "../Navbar/Nav";
 
 function RegisterScreen() {
   return (
-    <div>
+    <div className="fade-up">
       {/* <Nav /> */}
       <div
         className="flex justify-center items-center pt-10 pb-20"
-        style={{ minHeight: "60vh" }}
+        style={{ minHeight: "90vh" }}
       >
         <div className="login_form w-4/5 flex md:flex-col rounded-3xl md:w-11/12">
           <div className="log_form_left w-1/2 md:w-full md:rounded-t-3xl md:rounded-bl-none rounded-l-3xl">
@@ -80,18 +80,18 @@ function RegisterScreen() {
             <div className="w-11/12 mx-auto my-10 md:w-full md:px-2 md:my-4">
               <form action="/">
                 <div className="md:text-center">
-                  <label style={{ fontWeight: "900" }} htmlFor="">
+                  <label style={{ fontWeight: "900" }} htmlFor="" className="hidden-mobile">
                     Name <span>*</span>{" "}
                   </label>
                   <br />
                   <input
-                    className="w-4/5 mt-2"
+                    className="w-4/5 mt-2 "
                     type="text"
                     placeholder="Name"
                   />
                 </div>
-                <div className="mt-4 md:text-center">
-                  <label style={{ fontWeight: "900" }} htmlFor="">
+                <div className="mt-4 md:mt-0 md:text-center">
+                  <label style={{ fontWeight: "900" }} htmlFor="" className="hidden-mobile">
                     Email <span>*</span>{" "}
                   </label>
                   <br />
@@ -103,8 +103,8 @@ function RegisterScreen() {
                     placeholder="Email"
                   />
                 </div>
-                <div className="mt-4 md:text-center">
-                  <label style={{ fontWeight: "900" }} htmlFor="">
+                <div className="mt-4 md:mt-0 md:text-center">
+                  <label style={{ fontWeight: "900" }} htmlFor="" className="hidden-mobile">
                     Username <span>*</span>{" "}
                   </label>
                   <br />
