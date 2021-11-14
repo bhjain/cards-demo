@@ -9,7 +9,7 @@ function Footer() {
           className="mx-auto w-10/12"
           style={{ borderBottom: "1px solid #C2C2C2" }}
         ></div>
-        <div className="px-8 flex justify-between items-center py-4">
+        <div className="px-8 flex justify-between items-center py-2">
           <div className="footer_left w-3/12">
             <img className="z-1" src="nft-logo.png" alt="" />
             <p className="pl-4" style={{ fontSize: "14px" }}>
