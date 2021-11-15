@@ -9,7 +9,8 @@ import {
   List,
   ListItem,
   Range,
-} from 'tailwind-mobile/react';
+} from "tailwind-mobile/react";
+import "./discover.css";
 import { Discover_Data, high_to_low, low_to_high } from "./Discover_data";
 
 function Discover() {
@@ -32,15 +33,20 @@ function Discover() {
     // alert(val);
     if (val == "low_to_high") {
       // alert("low");
-      temp = DATA.ALL.sort(low_to_high);
+      temp = DATA.CURRENT.sort(low_to_high);
     } else {
       // alert("high");
-      temp = DATA.ALL.sort(high_to_low);
+      temp = DATA.CURRENT.sort(high_to_low);
     }
     setDATA({ ...DATA, CURRENT: temp });
   };
   const recent = () => {
-    const temp = DATA.ALL.reverse().slice(0, 2);
+    const temp = DATA.CURRENT.reverse().slice(0, 2);
+    setDATA({ ...DATA, CURRENT: temp });
+  };
+  const filter_by_price = (value) => {
+    let temp = [];
+    temp = DATA.CURRENT.filter((data) => data.price <= value);
     setDATA({ ...DATA, CURRENT: temp });
   };
 
@@ -80,107 +86,51 @@ function Discover() {
 
             <div
               style={{ display: ShowDrop ? "block" : "none" }}
-              className="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
+              className="origin-top-right bg-black  absolute mt-3 left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="menu-button"
               tabindex="-1"
             >
-              <div className="px-4">
-                <List>
+              <div className="px-4 bg-black text-center ">
+                {/* <List
+                  className="drop_option "
+                  style={{ backgroundColor: "black !important" }}
+                > */}
+                {volume}
                 <ListItem
-                    innerClassName="flex space-x-4"
-                    innerChildren={
-                      <>
-                        <span className="text-black text-sm font-bold">0</span>
-                        <Range
-                        colors={{
-                          valueBg: 'bg-blue-500',
-                          thumbBgMaterial: 'range-thumb:bg-green-500',
-                        }}
-                          value={volume}
-                          step={10}
-                          onChange={(e) => setVolume(e.target.value)}
-                        />
-                        <span className="text-black text-sm font-bold">100</span>
-                      </>
-                    }
-                  />
-                  <ListItem
-                    innerChildren={
+                  innerClassName="flex space-x-4"
+                  innerChildren={
+                    // <div className="flex-column">
+                    <>
+                      <span className="text-black text-sm font-bold drop_option">
+                        0
+                      </span>
                       <Range
                         colors={{
-                          valueBg: 'bg-blue-500',
-                          thumbBgMaterial: 'range-thumb:bg-green-500',
+                          valueBg: "bg-white",
+                          thumbBgMaterial: "range-thumb:bg-primary",
                         }}
-                        value={green}
-                        step={1}
-                        min={0}
-                        max={255}
-                        onChange={(e) => setGreen(e.target.value)}
-                      />
-                    }
-                  />
-                  <ListItem
-                    innerChildren={
-                      <Range
-                        colors={{
-                          valueBg: 'bg-blue-500',
-                          thumbBgMaterial: 'range-thumb:bg-blue-500',
+                        value={volume}
+                        max={1000}
+                        step={10}
+                        onChange={(e) => {
+                          setVolume(e.target.value);
+                          filter_by_price(e.target.value);
                         }}
-                        value={blue}
-                        step={1}
-                        min={0}
-                        max={255}
-                        onChange={(e) => setBlue(e.target.value)}
                       />
-                    }
-                  />
-                </List>
+                      <span className="text-black text-sm font-bold drop_option">
+                        1000
+                      </span>
+                    </>
 
+                    // </div>
+                  }
+                />
+                {/* </List> */}
               </div>
-              {/* <div class="py-1" role="none">
-                <a
-                  href="/"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-0"
-                >
-                  Account settings
-                </a>
-                <a
-                  href="/"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-1"
-                >
-                  Support
-                </a>
-                <a
-                  href="/"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-2"
-                >
-                  License
-                </a>
-                <form method="POST" action="#" role="none">
-                  <button
-                    type="submit"
-                    className="text-gray-700 block w-full text-left px-4 py-2 text-sm"
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-3"
-                  >
-                    Sign out
-                  </button>
-                </form>
-              </div> */}
             </div>
-          {/* <div className="absolute bg-red-500" style={{width: "50vw"}}>
+            {/* <div className="absolute bg-red-500" style={{width: "50vw"}}>
           </div> */}
           </div>
         </div>
@@ -189,8 +139,9 @@ function Discover() {
             Sort By <span className="font-bold">Recently Aded</span>
           </button>
         </div> */}
- <div
-            className="flex justify-center text-center"
+        <div className="filter w-40  py-2  sm:mb-8 ">
+          <div
+            className="flex justify-center  "
             onClick={() => setShowDrop_Sort_By(!ShowDrop_Sort_By)}
           >
             {/* <button
@@ -220,19 +171,18 @@ function Discover() {
             {/* </button> */}
           </div>
 
-        
-
-<div
+          <div
             style={{ display: ShowDrop_Sort_By ? "block" : "none" }}
-            className="origin-top-right mt-3 absolute right-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:ring-2"
+            // className="origin-top-right mt-3 absolute right-0 w-56 rounded-md shadow-lg bg-black text-white ring-1 ring-black ring-opacity-5 focus:ring-2"
+            className="origin-top-right absolute md:left-0 right-0 mt-4 w-56  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
             tabindex="-1"
           >
             <div className="" role="none">
-              <a
-                className="drop_option text-gray-700 block px-4 py-2 text-sm hover:bg-gray-500 "
+              <div
+                className="drop_option  text-gray-700 block px-4 py-2 text-sm hover:bg-gray-500 "
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-0"
@@ -244,8 +194,8 @@ function Discover() {
                 }}
               >
                 Recent Product
-              </a>
-              <a
+              </div>
+              <div
                 className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
                 role="menuitem"
                 tabindex="-1"
@@ -257,8 +207,8 @@ function Discover() {
                 }}
               >
                 Price (low-high)
-              </a>
-              <a
+              </div>
+              <div
                 className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
                 role="menuitem"
                 tabindex="-1"
@@ -270,11 +220,14 @@ function Discover() {
                 }}
               >
                 Price (high - low)
-              </a>
-              <a
-                style={{ display: sort_value !== "" ? "block" : "none" }}
-                href="/"
-                className="text-white block px-4 py-2 text-sm  hover:bg-gray-500 bg-white  "
+              </div>
+              <div
+                style={{
+                  display: sort_value != "" ? "block" : "none",
+                  backgroundColor: "gray",
+                }}
+                // href=""
+                className="text-white block px-4 py-2 text-sm  hover:bg-gray-500  "
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-1"
@@ -286,15 +239,10 @@ function Discover() {
                 }}
               >
                 Clear All
-              </a>
+              </div>
             </div>
           </div>
-
-
-
-
-
-
+        </div>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div
@@ -313,6 +261,21 @@ function Discover() {
           ))}
         </div>
       </div>
+      {(() => {
+        if (DATA.CURRENT.length == 0) {
+          return (
+            <div
+              className="text-center "
+              style={{
+                fontSize: "3rem",
+                height: "40vh",
+              }}
+            >
+              !!Oops No Data Found
+            </div>
+          );
+        }
+      })()}
     </div>
   );
 }
