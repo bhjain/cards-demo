@@ -115,7 +115,7 @@ function Nav() {
               className="creator px-4 py-4 text-center md:px-1"
               style={{ fontSize: "4vw" }}
             >
-              Creatorsd
+              Creator
             </div>
             <div
               className="discover px-4 py-4 text-center md:px-1"
@@ -124,12 +124,12 @@ function Nav() {
               Discover
             </div>
           </div>
-          <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}>
+          {/* <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}> */}
           {/*  Big Search Bar for mobile screen */}
-          {/* <div
+          <div
             className="small-mid w-full justify-between items-center absolute top-0 py-4 px-2 flex"
             style={{ display: smallSearch ? "flex" : "none" }}
-          > */}
+          >
             <div className="sm_search_box flex items-center pl-2 w-11/12">
               <img src="search.png" alt="" />
               <input type="text" placeholder="Search" className="h-10" />
@@ -233,7 +233,7 @@ function Nav() {
                   $$: Rs 200
                 </div>
               </div>
-              {/* <div className="flex justify-center items-center md:mt-4">
+              <div className="flex justify-center items-center md:mt-4">
                 <i
                   className="fas fa-times text-center"
                   style={{
@@ -245,7 +245,7 @@ function Nav() {
                   }}
                   onClick={() => setSideNav(!sidNav)}
                 ></i>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
