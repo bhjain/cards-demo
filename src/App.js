@@ -9,6 +9,9 @@ import Main from "./Main";
 import Register2 from "./Components/Register/Register2";
 import Logout from "./Components/Logout/Logout";
 import Discover from "./Components/Discover/Discover";
+import Creator from "./Components/Creator/Creator";
+import YourBides from "./Components/YourBides/YourBides";
+import Nft from "./Components/Nftpage/Nft";
 
 function App() {
   
@@ -23,6 +26,9 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/register2" element={<Register2 />} />
         <Route path="/discover" element={<Discover />} />
+        <Route path="/creator" element={<Creator />} />
+        <Route path='/yourbides' element={<YourBides />} />
+        <Route path='nftpage' element={<Nft />} />
       {/* </div> */}
       </Routes>
       <Footer />

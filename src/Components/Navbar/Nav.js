@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import Login from "../Buttons/Login";
 import Register from "../Buttons/Register";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Create from "../Buttons/Create";
 import OutsideClickHandler from 'react-outside-click-handler';
+import { useNavigate } from 'react-router'
 
 function Nav() {
   const [sidNav, setSideNav] = useState(false);
   const [search, setSearch] = useState(false);
   const [smallSearch, setSmallSearch] = useState(false);
   const [logStatus, setLogStatus] = useState();
-
+  const navigate = useNavigate();
   useEffect(() => {
     setLogStatus(localStorage.getItem("login"));
   }, [])
@@ -22,7 +23,7 @@ function Nav() {
     // Navbar
     <div className="navigation">
       {/* Large screen view */}
-      <div className="largeScreen flex lg:hidden my-2 justify-between">
+      <div className="largeScreen flex lg:hidden py-2 justify-between">
         <div className="navLeft flex items-center justify-between w-4/12">
           <div className="logo">
             <Link to="/">
@@ -30,7 +31,7 @@ function Nav() {
             </Link>
           </div>
           <div className="discover px-3">Discover</div>
-          <div className="creator px-3">Creators</div>
+          <div className="creator px-3" onClick={() => navigate('/creator')}>Creators</div>
         </div>
 
         
@@ -79,7 +80,7 @@ function Nav() {
 
 
           </div>
-          <div className="small-mid w-full justify-between items-center absolute top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}>
+          <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}>
             <div className="sm_search_box flex items-center pl-2 w-11/12">
               <img src="search.png" alt="" />
               <input type="text" placeholder="Search" className="h-10"/>

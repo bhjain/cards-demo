@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import Card from "../Cards/Card";
+import {
+  // Page,
+  // Navbar,
+  // NavbarBackLink,
+  // BlockTitle,
+  // BlockHeader,
+  List,
+  ListItem,
+  Range,
+} from 'tailwind-mobile/react';
 const card1 = [
   {
     img: "card1.png",
@@ -95,19 +105,25 @@ const card1 = [
 ];
 function Discover() {
   const [ShowDrop, setShowDrop] = useState(false);
+  const [volume, setVolume] = useState(50);
+  const [price, setPrice] = useState(150);
+  const [red, setRed] = useState(100);
+  const [green, setGreen] = useState(50);
+  const [blue, setBlue] = useState(75);
+
 
   return (
     <div className="mt-10">
-      <div className="flex justify-between mx-10">
-        <div className="filter w-28 text-center py-2 sm:w-20">
+      <div className="flex justify-between mx-10 sm:flex-col sm:mx-4">
+        <div className="filter w-28 text-center py-2 sm:w-32 sm:mb-8">
           {/* <button className="font-light">FILTER</button> */}
-          <div class="relative inline-block text-left">
+          <div className="relative inline-block text-left">
             <div className="flex">
               <button
                 type="button"
-                className="font-light sm:w-20  "
+                className="sm:w-20  inline-flex justify-center w-full rounded-md  border-gray-300 shadow-sm px-4 py-1 text-sm font-medium text-white-700 hover:bg-white-50  focus:ring-offset-gray-100 focus:ring-indigo-500 sm:py-0"
                 onClick={() => setShowDrop(!ShowDrop)}
-                class="inline-flex justify-center w-full rounded-md  border-gray-300 shadow-sm px-4 py-2 bg-black text-sm font-medium text-white-700 hover:bg-white-50  focus:ring-offset-gray-100 focus:ring-indigo-500"
+                // class=""
                 // class="inline-flex justify-center w-full rounded-md  border-gray-300 shadow-sm px-4 py-2 bg-black text-sm font-medium text-white-700 hover:bg-white-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
                 id="menu-button"
                 aria-expanded="true"
@@ -115,7 +131,7 @@ function Discover() {
               >
                 Filter
                 <svg
-                  class="-mr-1 ml-2 h-5 w-5"
+                  className="-mr-1 ml-2 h-5 w-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -132,16 +148,69 @@ function Discover() {
 
             <div
               style={{ display: ShowDrop ? "block" : "none" }}
-              class="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+              className="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="menu-button"
               tabindex="-1"
             >
-              <div class="py-1" role="none">
+              <div className="px-4">
+                <List>
+                <ListItem
+                    innerClassName="flex space-x-4"
+                    innerChildren={
+                      <>
+                        <span className="text-black text-sm font-bold">0</span>
+                        <Range
+                        colors={{
+                          valueBg: 'bg-blue-500',
+                          thumbBgMaterial: 'range-thumb:bg-green-500',
+                        }}
+                          value={volume}
+                          step={10}
+                          onChange={(e) => setVolume(e.target.value)}
+                        />
+                        <span className="text-black text-sm font-bold">100</span>
+                      </>
+                    }
+                  />
+                  <ListItem
+                    innerChildren={
+                      <Range
+                        colors={{
+                          valueBg: 'bg-blue-500',
+                          thumbBgMaterial: 'range-thumb:bg-green-500',
+                        }}
+                        value={green}
+                        step={1}
+                        min={0}
+                        max={255}
+                        onChange={(e) => setGreen(e.target.value)}
+                      />
+                    }
+                  />
+                  <ListItem
+                    innerChildren={
+                      <Range
+                        colors={{
+                          valueBg: 'bg-blue-500',
+                          thumbBgMaterial: 'range-thumb:bg-blue-500',
+                        }}
+                        value={blue}
+                        step={1}
+                        min={0}
+                        max={255}
+                        onChange={(e) => setBlue(e.target.value)}
+                      />
+                    }
+                  />
+                </List>
+
+              </div>
+              {/* <div class="py-1" role="none">
                 <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
+                  href="/"
+                  className="text-gray-700 block px-4 py-2 text-sm"
                   role="menuitem"
                   tabindex="-1"
                   id="menu-item-0"
@@ -149,8 +218,8 @@ function Discover() {
                   Account settings
                 </a>
                 <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
+                  href="/"
+                  className="text-gray-700 block px-4 py-2 text-sm"
                   role="menuitem"
                   tabindex="-1"
                   id="menu-item-1"
@@ -158,8 +227,8 @@ function Discover() {
                   Support
                 </a>
                 <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
+                  href="/"
+                  className="text-gray-700 block px-4 py-2 text-sm"
                   role="menuitem"
                   tabindex="-1"
                   id="menu-item-2"
@@ -169,7 +238,7 @@ function Discover() {
                 <form method="POST" action="#" role="none">
                   <button
                     type="submit"
-                    class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                    className="text-gray-700 block w-full text-left px-4 py-2 text-sm"
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-3"
@@ -177,8 +246,10 @@ function Discover() {
                     Sign out
                   </button>
                 </form>
-              </div>
+              </div> */}
             </div>
+          {/* <div className="absolute bg-red-500" style={{width: "50vw"}}>
+          </div> */}
           </div>
         </div>
         <div className="sortBy w-48 py-2 px-2 text-center sm:w-30">
