@@ -4,9 +4,9 @@ import Login from "../Buttons/Login";
 import Register from "../Buttons/Register";
 import { Link} from "react-router-dom";
 import Create from "../Buttons/Create";
-import OutsideClickHandler from "react-outside-click-handler";
+// import OutsideClickHandler from "react-outside-click-handler";
 import { useDispatch } from "react-redux";
-import { SHOW_SEARCH_INPUT } from "../../Redux/ACTION";
+// import { SHOW_SEARCH_INPUT } from "../../Redux/ACTION";
 
 function Nav() {
   const [sidNav, setSideNav] = useState(false);
@@ -48,7 +48,7 @@ function Nav() {
               setSearch(true);
               setTimeout(() => {
                 // alert("ok");
-                if (search_Data.trim() == "") {
+                if (search_Data.trim() === "") {
                   setSearch(false);
                 }
               }, 5000);

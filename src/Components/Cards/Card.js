@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.css';
 
 function Card({props}) {
+    console.log(props);
     return (
         <div className="singleCard">
             <div className="cardimg">
@@ -20,14 +21,14 @@ function Card({props}) {
                         <img src={props.owner.ownerimg} alt="" style={{width: "31px", height: "31px"}} />
                         <div>
                             <h4 className="font-bold">Owner</h4>
-                            <p className="text-xs" style={{position: "relative", left: "16px"}}>{props.owner.name}</p>
+                            <p className="text-xs" style={{position: "relative", left: "16px", fontSize: "10px"}}>{props.owner.name}</p>
                         </div>
                     </div>
                     <div className="Creator flex justify-center items-center mt-4 mx-2 gap-3">
                         <img src={props.creator.creatorimg} alt="" style={{width: "31px", height: "31px"}} />
                         <div>
                             <h4 className="font-bold">Owner</h4>
-                            <p className="text-xs" style={{position: "relative", left: "16px"}}>{props.creator.name}</p>
+                            <p className="text-xs" style={{position: "relative", left: "16px", fontSize: "10px"}}>{props.creator.name}</p>
                         </div>
                     </div>
                 </div>

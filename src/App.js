@@ -12,6 +12,8 @@ import Discover from "./Components/Discover/Discover";
 import Creator from "./Components/Creator/Creator";
 import YourBides from "./Components/YourBides/YourBides";
 import Nft from "./Components/Nftpage/Nft";
+import Congracts from "./Components/Congrachulation/Congracts";
+import CreateNft from "./Components/Nftpage/CreateNft";
 
 function App() {
   
@@ -29,6 +31,8 @@ function App() {
         <Route path="/creator" element={<Creator />} />
         <Route path='/yourbides' element={<YourBides />} />
         <Route path='/nftpage' element={<Nft />} />
+        <Route path='/congrats' element={<Congracts />} />
+        <Route path='/createNft' element={<CreateNft />} />
       {/* </div> */}
       </Routes>
       <Footer />
