@@ -14,6 +14,8 @@ import YourBides from "./Components/YourBides/YourBides";
 import Nft from "./Components/Nftpage/Nft";
 import Congracts from "./Components/Congrachulation/Congracts";
 import CreateNft from "./Components/Nftpage/CreateNft";
+import Profile from "./Components/Profile/Profile";
+import Setting from "./Components/Setting/Setting";
 
 function App() {
   
@@ -33,6 +35,8 @@ function App() {
         <Route path='/nftpage' element={<Nft />} />
         <Route path='/congrats' element={<Congracts />} />
         <Route path='/createNft' element={<CreateNft />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/setting' element={<Setting />} />
       {/* </div> */}
       </Routes>
       <Footer />

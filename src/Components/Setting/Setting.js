@@ -1,0 +1,124 @@
+import React from 'react';
+import "react-step-progress-bar/styles.css";
+import { ProgressBar, Step } from "react-step-progress-bar";
+import CompleteKyc from '../Buttons/CompleteKyc';
+import Save from '../Buttons/Save';
+
+function Setting() {
+    return (
+        <div>
+            <div className="w-10/12 mx-auto my-10 md:w-11/12">
+                <h2 className="text-2xl font-bold">Settings</h2>
+                <div className="pb-10" style={{backgroundColor: "#FFF", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)", borderRadius: "30px"}}>
+                    <div className="prog_bar px-4 pt-24 mt-10 flex justify-center" style={{borderRadius: "30px"}}>
+                        <ProgressBar
+                            percent={50}
+                            filledBackground="#69F0AE"
+                            height={4}
+                            width="60%"
+                        >
+                            <Step transition="scale">
+                            {({ accomplished }) => (
+                                <div className="min-w-2 min-h-2" style={{ backgroundColor: accomplished ? "#69F0AE" : "#e4e4e4", minHeight: "13px", minWidth: "13px", borderRadius: "50%"}}>
+                                </div>
+                            )}
+                            </Step>
+                            <Step transition="scale">
+                            {({ accomplished }) => (
+                                <div className="min-w-4 min-h-4" style={{ backgroundColor: accomplished ? "#69F0AE" : "#e4e4e4", minHeight: "13px", minWidth: "13px", borderRadius: "50%"}}>
+                                </div>
+                            )}
+                            </Step>
+                            <Step transition="scale">
+                            {({ accomplished }) => (
+                                <div className="min-w-4 min-h-4" style={{ backgroundColor: accomplished ? "#69F0AE" : "#e4e4e4", minHeight: "13px", minWidth: "13px", borderRadius: "50%"}}>
+                                </div>
+                            )}
+                            </Step>
+                        </ProgressBar>
+                    </div>
+                    <div className="flex mx-auto justify-between mt-10 pb-4" style={{padding: "0 10%", borderRadius: "30px"}}>
+                        <div className="w-3/12 ">
+                            <div className="text-center font-bold text-lg">Register <br />Account</div>
+                            <p className="text-center mt-8" style={{fontSize: "10px", color: "#69F0AE"}}>Done!</p>
+                        </div>
+                        <div className="w-3/12 text-center">
+                            <h2 className="text-lg font-bold">2FA</h2>
+                            <p className="text-left text-xs pt-2">Secure your account with 2 factor authentication.</p>
+                            <p className="text-center mt-6" style={{fontSize: "10px", color: "#69F0AE"}}>Verfied</p>
+                        </div>
+                        <div className="w-3/12 ">
+                            <h2 className="text-center text-lg font-bold">Complete KYC </h2>
+                            <p className="text-xs pt-2">Complete your KYC and start trading NFTs on Immutly.</p>
+                        </div>
+                    </div>
+                    <div className="w-9/12 mx-auto flex justify-end">
+                        <CompleteKyc back={"#FFFF0A"} color={"#000000"} />
+                    </div>
+                </div>
+            </div>
+            <div className="w-10/12 mx-auto flex">
+                <div className="w-1/4 pt-8">
+                    <img style={{width: "70%"}} src="creator-1.png" alt="" />
+                    <div style={{color: "#4200FF"}}>Change Profile Picture</div>
+                </div>
+                <div className="w-3/4 ">
+                    <form action="/">
+                        <div className="flex justify-between" style={{width: "60%"}}>
+                            <div>
+                                <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Full Name</label>
+                                <br />
+                                <br />
+                                <input className="py-2 px-4" placeholder="Full Name" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                            </div>
+                            <div>
+                                <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Username</label>
+                                <br />
+                                <br />
+                                <input className="py-2 px-4" placeholder="Username" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                            </div>                        
+                        </div>
+                        <div className="my-8">
+                            <label style={{ fontWeight: "900" }} htmlFor="">Bio</label>
+                            <br />
+                            <textarea className="w-4/5 px-2 py-4" name="Bio" id="" cols="30" rows="10" style={{border: "1px solid #C2C2C2", borderRadius: "20px"}}></textarea>
+                        </div>
+                        <div className="flex justify-between w-4/5 gap-8 text-center my-10">
+                            <div className="w-1/2">
+                                <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Full Name</label>
+                                <br />
+                                <br />
+                                <input className="py-2 px-4 w-full" placeholder="Full Name" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                            </div>
+                            <div className="w-1/2 mx-auto">
+                                <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Username</label>
+                                <br />
+                                <br />
+                                <input className="py-2 px-4 w-full" placeholder="Username" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                            </div>                        
+                        </div>
+                        <div className="flex justify-between w-4/5 gap-8 text-center my-10">
+                            <div className="w-1/2">
+                                <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Facebook</label>
+                                <br />
+                                <br />
+                                <input className="py-2 px-4 w-full" placeholder="Facebook" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                            </div>
+                            <div className="w-1/2 mx-auto">
+                                <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Twitter</label>
+                                <br />
+                                <br />
+                                <input className="py-2 px-4 w-full" placeholder="Twitter" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                            </div>                        
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div className="flex justify-center mb-14 mt-4">
+                <Save back={"#FFFF0A"} color={"#000000"} />
+            </div>
+        </div>
+    )
+}
+
+export default Setting
