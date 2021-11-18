@@ -11,7 +11,7 @@ import { persistor, store } from "./Redux/sotre";
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <div style={{ backgroundColor: "#E5E5E5" }}>
+      <div style={{ backgroundColor: "#E5E5E5", fontFamily: "Garet" }}>
         <App />
       </div>
     </React.StrictMode>

@@ -16,6 +16,7 @@ import Congracts from "./Components/Congrachulation/Congracts";
 import CreateNft from "./Components/Nftpage/CreateNft";
 import Profile from "./Components/Profile/Profile";
 import Setting from "./Components/Setting/Setting";
+import Kyc from "./Components/Kyc/Kyc";
 
 function App() {
   
@@ -37,6 +38,7 @@ function App() {
         <Route path='/createNft' element={<CreateNft />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/setting' element={<Setting />} />
+        <Route path='/kyc' element={<Kyc />} /> 
       {/* </div> */}
       </Routes>
       <Footer />

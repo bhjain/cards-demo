@@ -1,0 +1,17 @@
+.list{
+    background-color: #000000;
+    transform: 1s linear;
+    cursor: pointer;
+}
+
+.list_item{
+    background-color: #000000;
+    color: #FFF;
+    border-bottom: 1px solid #FFF;
+    padding: 8px;
+    text-align: center;
+}
+
+.list_item:hover{
+    background-color: rgba(107, 114, 128);
+}

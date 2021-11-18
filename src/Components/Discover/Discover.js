@@ -139,7 +139,7 @@ function Discover() {
             Sort By <span className="font-bold">Recently Aded</span>
           </button>
         </div> */}
-        <div className="filter w-40  py-2  sm:mb-8 ">
+        <div className="filter w-44  py-2  sm:mb-8 ">
           <div
             className="flex justify-center  "
             onClick={() => setShowDrop_Sort_By(!ShowDrop_Sort_By)}

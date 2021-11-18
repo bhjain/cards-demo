@@ -1,4 +1,5 @@
 import React from 'react';
+import Capture from '../Buttons/Capture';
 import Card from '../Cards/Card';
 import ProfileCard from '../Cards/ProfileCard';
 const user_card = [

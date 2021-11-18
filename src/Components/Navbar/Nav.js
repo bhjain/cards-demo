@@ -119,7 +119,7 @@ function Nav() {
             </div>
             <div
               className="discover px-4 py-4 text-center md:px-1"
-              style={{ fontSize: "4vw" }}
+              style={{ fontSize: "4vw", fontFamily: "grat" }}
             >
               Discover
             </div>

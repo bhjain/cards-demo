@@ -39,17 +39,17 @@ function Setting() {
                     </div>
                     <div className="flex mx-auto justify-between mt-10 pb-4" style={{padding: "0 10%", borderRadius: "30px"}}>
                         <div className="w-3/12 ">
-                            <div className="text-center font-bold text-lg">Register <br />Account</div>
+                            <div className="text-center font-bold text-lg md:text-sm">Register <br />Account</div>
                             <p className="text-center mt-8" style={{fontSize: "10px", color: "#69F0AE"}}>Done!</p>
                         </div>
                         <div className="w-3/12 text-center">
-                            <h2 className="text-lg font-bold">2FA</h2>
-                            <p className="text-left text-xs pt-2">Secure your account with 2 factor authentication.</p>
+                            <h2 className="text-lg font-bold md:text-sm">2FA</h2>
+                            <p className="text-left text-xs pt-2 md:hidden">Secure your account with 2 factor authentication.</p>
                             <p className="text-center mt-6" style={{fontSize: "10px", color: "#69F0AE"}}>Verfied</p>
                         </div>
                         <div className="w-3/12 ">
-                            <h2 className="text-center text-lg font-bold">Complete KYC </h2>
-                            <p className="text-xs pt-2">Complete your KYC and start trading NFTs on Immutly.</p>
+                            <h2 className="text-center text-lg font-bold md:text-sm">Complete KYC </h2>
+                            <p className="text-xs pt-2 md:hidden">Complete your KYC and start trading NFTs on Immutly.</p>
                         </div>
                     </div>
                     <div className="w-9/12 mx-auto flex justify-end">
@@ -57,58 +57,58 @@ function Setting() {
                     </div>
                 </div>
             </div>
-            <div className="w-10/12 mx-auto flex">
-                <div className="w-1/4 pt-8">
-                    <img style={{width: "70%"}} src="creator-1.png" alt="" />
+            <div className="w-10/12 mx-auto flex md:flex-col md:w-full">
+                <div className="w-1/4 pt-8 md:w-full md:text-center">
+                    <img className="md:mx-auto" style={{width: "70%"}} src="creator-1.png" alt="" />
                     <div style={{color: "#4200FF"}}>Change Profile Picture</div>
                 </div>
-                <div className="w-3/4 ">
+                <div className="w-3/4 md:w-full">
                     <form action="/">
-                        <div className="flex justify-between" style={{width: "60%"}}>
+                        <div className="flex justify-between md:flex-col w-3/5 md:w-4/5 md:mx-auto gap-2 md:gap-0">
                             <div>
                                 <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Full Name</label>
                                 <br />
                                 <br />
-                                <input className="py-2 px-4" placeholder="Full Name" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                                <input className="py-2 px-4 md:w-full md:mx-auto" placeholder="Full Name" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
                             </div>
                             <div>
                                 <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Username</label>
                                 <br />
                                 <br />
-                                <input className="py-2 px-4" placeholder="Username" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                                <input className="py-2 px-4 md:w-full md:mx-auto" placeholder="Username" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
                             </div>                        
                         </div>
-                        <div className="my-8">
-                            <label style={{ fontWeight: "900" }} htmlFor="">Bio</label>
+                        <div className="my-8 md:mx-auto md:flex">
+                            <label style={{ fontWeight: "900" }} htmlFor="" className="md:hidden">Bio</label>
                             <br />
-                            <textarea className="w-4/5 px-2 py-4" name="Bio" id="" cols="30" rows="10" style={{border: "1px solid #C2C2C2", borderRadius: "20px"}}></textarea>
+                            <textarea className="w-4/5 px-2 py-4 md:w-5/6 md:mx-auto" name="Bio" id="" placeholder="Bio" cols="30" rows="10" style={{border: "1px solid #C2C2C2", borderRadius: "20px"}}></textarea>
                         </div>
-                        <div className="flex justify-between w-4/5 gap-8 text-center my-10">
-                            <div className="w-1/2">
+                        <div className="flex justify-between w-4/5 gap-8 text-center my-10 md:flex-col md:gap-0 md:w-5/6 md:mx-auto">
+                            <div className="w-1/2 md:w-full">
                                 <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Full Name</label>
                                 <br />
                                 <br />
-                                <input className="py-2 px-4 w-full" placeholder="Full Name" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                                <input className="py-2 px-4 w-full md:mx-auto" placeholder="Full Name" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
                             </div>
-                            <div className="w-1/2 mx-auto">
+                            <div className="w-1/2 mx-auto md:w-full">
                                 <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Username</label>
                                 <br />
                                 <br />
-                                <input className="py-2 px-4 w-full" placeholder="Username" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                                <input className="py-2 px-4 w-full md:mx-auto md:w-5/6]" placeholder="Username" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
                             </div>                        
                         </div>
-                        <div className="flex justify-between w-4/5 gap-8 text-center my-10">
-                            <div className="w-1/2">
+                        <div className="flex justify-between w-4/5 gap-8 text-center my-10 md:flex-col md:gap-0 md:w-5/6 md:mx-auto">
+                            <div className="w-1/2 md:w-full">
                                 <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Facebook</label>
                                 <br />
                                 <br />
-                                <input className="py-2 px-4 w-full" placeholder="Facebook" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                                <input className="py-2 px-4 w-full md:mx-auto" placeholder="Facebook" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
                             </div>
-                            <div className="w-1/2 mx-auto">
+                            <div className="w-1/2 mx-auto md:w-full">
                                 <label style={{ fontWeight: "900" }} htmlFor="rdfg" className="hidden-mobile">Twitter</label>
                                 <br />
                                 <br />
-                                <input className="py-2 px-4 w-full" placeholder="Twitter" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
+                                <input className="py-2 px-4 w-full md:mx-auto md:w-5/6]" placeholder="Twitter" type="text" style={{border: "1px solid #C2C2C2", boxSizing: "border-box", borderRadius: "20px"}} />
                             </div>                        
                         </div>
                     </form>
