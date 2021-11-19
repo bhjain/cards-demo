@@ -17,6 +17,7 @@ import CreateNft from "./Components/Nftpage/CreateNft";
 import Profile from "./Components/Profile/Profile";
 import Setting from "./Components/Setting/Setting";
 import Kyc from "./Components/Kyc/Kyc";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 function App() {
   
@@ -38,7 +39,8 @@ function App() {
         <Route path='/createNft' element={<CreateNft />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/setting' element={<Setting />} />
-        <Route path='/kyc' element={<Kyc />} /> 
+        <Route path='/kyc' element={<Kyc />} />
+        <Route path='/dashboard' element={<Dashboard />} />
       {/* </div> */}
       </Routes>
       <Footer />
