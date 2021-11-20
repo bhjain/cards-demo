@@ -1,8 +1,6 @@
-import React from 'react';
-import './Card.css';
+import React from 'react'
 
-function Card({props}) {
-    console.log(props);
+function Collection({props}) {
     return (
         <div className="singleCard">
             <div className="cardimg">
@@ -10,12 +8,16 @@ function Card({props}) {
             </div>
             <div className="cardheading text-center font-bold text-lg my-6">
                 {props.heading}
+                <p className="my-2">{props.subHeading}</p>
+                <div className="px-3 text-sm">
+                    {props.text}
+                </div>
+                <img className="ml-4 mt-2 w-8" src="setting.png" alt="" />
             </div>
-            <div className="cardLower flex justify-between mx-4">
+            {/* <div className="cardLower flex justify-between mx-4">
                 <div className="price left w-2/5 h-20 mx-2">
                     <h4 className="font-bold">PRICE</h4>
                     <p>{props.price}</p>
-                    <img className="w-8 mt-2" src="setting.png" alt="" />
                 </div>
                 <div className="right w-3/5 mb-6">
                     <div className="Owner flex justify-center mx-2 items-center gap-3">
@@ -33,9 +35,9 @@ function Card({props}) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
 
-export default Card
+export default Collection

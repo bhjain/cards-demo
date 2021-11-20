@@ -18,6 +18,7 @@ import Profile from "./Components/Profile/Profile";
 import Setting from "./Components/Setting/Setting";
 import Kyc from "./Components/Kyc/Kyc";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import CreatorSpace from "./Components/Creator/CreatorSpace";
 
 function App() {
   
@@ -41,6 +42,7 @@ function App() {
         <Route path='/setting' element={<Setting />} />
         <Route path='/kyc' element={<Kyc />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/creatorspace' element={<CreatorSpace />} />
       {/* </div> */}
       </Routes>
       <Footer />
