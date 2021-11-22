@@ -105,19 +105,24 @@ function Logout() {
                     <button className="font-light">Sort By <span className="font-bold">Recently Aded</span></button>
                 </div>
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-2 justify-between gap-14 mx-40 lg:mx-28 my-8 sm:grid-cols-1">
-                {/* <Card props={card1} />
-                <Card props={card1} />
-                <Card props={card1} />
-                <Card props={card1} />
-                <Card props={card1} />
-                <Card props={card1} />
-                <Card props={card1} /> */}
-                {
-                    card1.map((element) => (
-                        <Card props={element} />
-                    ))
-                }
+            <div className="flex justify-center items-center">
+                <div
+                className="grid grid-cols-3 md:grid-cols-2 justify-between gap-14  my-8 sm:grid-cols-1"
+                style={{ width: "80%" }}
+                >                
+                    {/* <Card props={card1} />
+                    <Card props={card1} />
+                    <Card props={card1} />
+                    <Card props={card1} />
+                    <Card props={card1} />
+                    <Card props={card1} />
+                    <Card props={card1} /> */}
+                    {
+                        card1.map((element) => (
+                            <Card props={element} />
+                        ))
+                    }
+                </div>
             </div>
         </div>
 
