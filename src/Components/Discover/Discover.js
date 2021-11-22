@@ -52,7 +52,7 @@ function Discover() {
 
   return (
     <div className="mt-10">
-      <div className="flex justify-between mx-10 sm:flex-col sm:mx-4">
+      <div className="flex justify-between mx-10 sm:mx-4">
         <div className="filter w-28 text-center py-2 sm:w-32 sm:mb-8">
           {/* <button className="font-light">FILTER</button> */}
           <div className="relative inline-block text-left">
@@ -139,9 +139,9 @@ function Discover() {
             Sort By <span className="font-bold">Recently Aded</span>
           </button>
         </div> */}
-        <div className="filter w-44  py-2  sm:mb-8 ">
+        <div className="filter w-44 sm:mb-8 py-2">
           <div
-            className="flex justify-center  "
+            className="flex justify-center text-sm items-center h-full"
             onClick={() => setShowDrop_Sort_By(!ShowDrop_Sort_By)}
           >
             {/* <button
@@ -174,7 +174,7 @@ function Discover() {
           <div
             style={{ display: ShowDrop_Sort_By ? "block" : "none" }}
             // className="origin-top-right mt-3 absolute right-0 w-56 rounded-md shadow-lg bg-black text-white ring-1 ring-black ring-opacity-5 focus:ring-2"
-            className="origin-top-right absolute md:left-0 right-0 mt-4 w-56  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
+            className="origin-top-right absolute mt-4 w-56  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto sm:right-2"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"

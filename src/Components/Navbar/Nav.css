@@ -101,17 +101,17 @@
 }
 
 .semiSide {
-  right: 0;
+  left: 0;
   position: absolute;
   animation: sliding 1s;
 }
 
 @keyframes sliding {
   from {
-    right: -200px;
+    left: -200px;
   }
   to {
-    right: 0px;
+    left: 0px;
   }
 }
 

@@ -17,7 +17,7 @@ function Kyc() {
                     <img className="w-8 h-6" src="rot_tri.png" alt="" />
                 </div>
             </div>
-            <div className="list mx-auto w-8/12" style={{display: showList ? "block" : "none", left: "10%"}}>
+            <div className="list mx-auto w-10/12" style={{display: showList ? "block" : "none", left: "10%"}}>
                 <div className="list_item" onClick={() => {
                     setDoc("Adhar");
                     setShowList(false)

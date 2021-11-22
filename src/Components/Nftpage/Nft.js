@@ -7,10 +7,10 @@ import './Nft.css'
 function Nft() {
     return (
         <div className="pt-14 pb-24">
-            <div className="main_img mx-auto w-4/5 bg-black py-4">
+            <div className="main_img mx-auto w-4/5 bg-black py-4 sm:w-full">
                 <img className="mx-auto" src="card1.png" alt="" />
             </div>
-            <div className="w-4/5 flex mx-auto my-8 md:flex-col">
+            <div className="w-4/5 flex mx-auto my-8 md:flex-col sm:w-full">
                 <div className="mx-auto">
                     <p style={{color: "#C2C2C2"}}>Share this creation</p>
                     <div className="social_media_logo flex gap-4 justify-center mt-2">
@@ -55,7 +55,7 @@ function Nft() {
                 className="mx-auto w-10/12 py-2"
                 style={{ borderBottom: "1px solid #C2C2C2" }}
             ></div>
-            <div className="w-10/12 mx-auto my-8 flex justify-between md:flex-col">
+            <div className="w-10/12 mx-auto my-8 flex justify-between md:flex-col sm:w-full">
                 <div className="w-6/12 bg-black mr-10 md:w-10/12 md:mx-auto">
                     <img className="mx-auto" src="card1.png" alt="" />
                 </div>
@@ -69,7 +69,7 @@ function Nft() {
                 className="mx-auto w-10/12 py-2"
                 style={{ borderBottom: "1px solid #C2C2C2" }}
             ></div>
-            <div className="hist w-10/12 mx-auto py-8">
+            <div className="hist w-10/12 mx-auto py-8 sm:w-full">
                 <div className="text-3xl font-bold pb-8 md:text-center">History</div>
                 <div className="hist_div" style={{backgroundColor: "#FFF"}}>
                     <div className="flex items-center justify-center py-4">

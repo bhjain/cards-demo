@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import Capture from '../Buttons/Capture';
 import Card from '../Cards/Card';
 import ProfileCard from '../Cards/ProfileCard';
@@ -31,6 +32,7 @@ const user_card = [
     }
 ]
 function Profile() {
+    const navigate = useNavigate()
     return (
         <div className="w-11/12 mx-auto my-10 flex md:flex-col">
             <div className="prof_pic w-1/3 md:w-full">
@@ -46,7 +48,9 @@ function Profile() {
                 <div className="relative -top-24">
                     <div className="flex gap-8 justify-center pl-14">
                         <h2 className="font-bold text-3xl md:text-2xl">John Doe</h2>
-                        <img src="setting.png" alt="" />
+                        <div onClick={() => navigate("/setting")}>
+                            <img src="setting.png" alt="" />
+                        </div>
                     </div>
                     <p className="text-center font-bold md:text-sm">@johndoe</p>
                     <div className="prof_des text-center mt-8">

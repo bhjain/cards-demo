@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function CreateNew({ back, color }) {
   
@@ -11,11 +12,13 @@ function CreateNew({ back, color }) {
           className="login w-32 h-8 flex items-center justify-center lg:w-28 lg:h-8"
           style={{ backgroundColor: `${back}`, color: `${color}` }}
         >
-          <button
-            className="font-medium text-sm"
-          >
-            Create New
-          </button>
+          <Link to="/creatorspace">
+            <button
+              className="font-medium text-sm"
+            >
+              Create New
+            </button>
+          </Link>
         </div>
       </div>
     );

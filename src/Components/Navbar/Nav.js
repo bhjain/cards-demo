@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import Login from "../Buttons/Login";
 import Register from "../Buttons/Register";
-import { Link} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Create from "../Buttons/Create";
 // import OutsideClickHandler from "react-outside-click-handler";
 import { useDispatch } from "react-redux";
@@ -15,7 +15,7 @@ function Nav() {
   const [logStatus, setLogStatus] = useState();
   const [search_Data, setSearch_Data] = useState("");
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   useEffect(() => {
     setLogStatus(localStorage.getItem("login"));
   }, []);
@@ -27,17 +27,19 @@ function Nav() {
     // Navbar
     <div className="navigation">
       {/* Large screen view */}
-      <div className="largeScreen flex lg:hidden py-2 justify-between">
+      <div className="largeScreen flex lg:hidden py-2 justify-between px-4">
         <div className="navLeft flex items-center justify-between w-4/12">
           <div className="logo">
             <Link to="/">
               <img src="nft-logo.png" alt="" />
             </Link>
           </div>
+          <Link to="/creator">
+            <div className="creator px-3">Creators</div>
+          </Link>
           <Link to="/discover">
             <div className="discover px-3">Discover</div>
           </Link>
-          <div className="creator px-3">Creators</div>
         </div>
 
         <div className="navRight w-8/12 flex items-center justify-end">
@@ -85,10 +87,12 @@ function Nav() {
             style={{ display: logStatus === "true" ? "flex" : "none" }}
           >
             <div className="1/3">
-              <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
+              <Create back={"#FFFF00"} color={"#000000"} place={"/creatorspace"} />
             </div>
             <div className="w-2/3 mx-auto">
-              <img className="mx-auto" src="user.png" alt="" />
+              <div onClick={() => navigate("/profile")}>
+                <img className="mx-auto" src="user.png" alt="" />
+              </div>
               <div className="userprice text-center mt-4 text-sm">
                 $$: Rs 200
               </div>
@@ -98,30 +102,36 @@ function Nav() {
       </div>
 
       {/* Small screen view */}
-      <div className="smallScreen hidden lg:block">
+      <div className="smallScreen hidden lg:block ">
       {/* <div className="smallScreen "> */}
         <div className="flex items-center justify-between">
           <div
-            className="9/12 flex items-center"
+            className="10/12 flex items-center "
             // style={{ display: smallSearch ? "none" : "flex" }}
             style={{ display: "flex" }}
           >
             <div className="small-left">
               <div className="logo">
-                <img className="w-40 sm:w-20" src="nft-logo.png" alt="" />
+                <Link to="/">
+                  <img className="w-40 sm:w-32" src="nft-logo.png" alt="" />
+                </Link>
               </div>
             </div>
             <div
               className="creator px-4 py-4 text-center md:px-1"
               style={{ fontSize: "4vw" }}
             >
-              Creator
+              <Link to="/creator">
+                Creator
+              </Link>
             </div>
             <div
               className="discover px-4 py-4 text-center md:px-1"
               style={{ fontSize: "4vw", fontFamily: "grat" }}
             >
-              Discover
+              <Link to="discover">
+                Discover
+              </Link>
             </div>
           </div>
           {/* <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}> */}
@@ -149,7 +159,7 @@ function Nav() {
           </div>
           {/* >>>>>>>>>>>>>>>>>>>>> */}
           <div
-            className="small-right w-3/12 flex justify-end items-center"
+            className="small-right flex justify-end items-center h-full py-4 pr-2"
             style={{ display: smallSearch ? "none" : "flex" }}
           >
             <div
