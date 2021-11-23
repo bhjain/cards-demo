@@ -112,7 +112,7 @@ function Nav() {
           <div
             className="10/12 flex items-center "
             // style={{ display: smallSearch ? "none" : "flex" }}
-            style={{ display: "flex" }}
+            style={{ display: smallSearch ? "none" : "flex" }}
           >
             <div className="small-left">
               <div className="logo">
@@ -137,10 +137,15 @@ function Nav() {
           {/* <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}> */}
           {/*  Big Search Bar for mobile screen */}
           <div
-            className="small-mid w-full justify-between items-center absolute top-0 py-4 px-2 flex"
+            className="small-mid w-full justify-between items-center absolute top-0 py-4 px-1 flex"
             style={{ display: smallSearch ? "flex" : "none" }}
           >
-            <div className="sm_search_box flex justify-end items-center pl-2 w-11/12">
+            <div className="logo w-3/120">
+              <Link to="/">
+                <img className="w-40 sm:w-32" src="nft-logo.png" alt="" />
+              </Link>
+            </div>
+            <div className="sm_search_box flex items-center pl-2 w-8/12">
               <img src="search.png" alt="" />
               <input type="text" placeholder="Search" className="h-10" />
             </div>
