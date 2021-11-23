@@ -30,29 +30,29 @@ function CreatorSpace() {
         <div className="w-full my-14">
             <div className="flex sm:flex-col">
                 <div className="dashboard_sidebar w-1/5 py-8 text-left pl-14 lg:pl-8 md:pl-2 md:w-2/6 sm:hidden" style={{borderRight: "1px solid #C4C4C4", maxHeight: "100vh"}}>
-                    {/* <div className="py-6">
+                    <div className="py-6">
                         <Link to="/dashboard">
                             Dashboard
                         </Link>
-                    </div> */}
-                    {/* <div className="py-6">
+                    </div>
+                    <div className="py-6">
                         <Link to="/">
                             Analytics
                         </Link>
-                    </div> */}
-                    {/* <div className="py-6">
+                    </div>
+                    <div className="py-6">
                         <Link to="/">
                             Collaborate
                         </Link>
-                    </div> */}
-                    {/* <div className="py-6">
+                    </div>
+                    <div className="py-6">
                         <Link to="/">
                             Plans
                         </Link>
-                    </div> */}
-                    {/* <div className="flex py-8" >
+                    </div>
+                    <div className="flex py-8" >
                         <CreateNft back={"#FFFF0A"} color={"#000000"} />
-                    </div> */}
+                    </div>
                 </div>
                 {/* <div className="dashboard_sidebar hidden sm:block text-center sm:w-full">
                     <div className="py-6">Dashboard</div>
