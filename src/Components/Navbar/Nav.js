@@ -6,12 +6,14 @@ import { Link, useNavigate } from "react-router-dom";
 import Create from "../Buttons/Create";
 // import OutsideClickHandler from "react-outside-click-handler";
 import { useDispatch } from "react-redux";
+import CreateNft from "../Buttons/CreateNft";
 // import { SHOW_SEARCH_INPUT } from "../../Redux/ACTION";
 
 function Nav() {
   const [sidNav, setSideNav] = useState(false);
   const [search, setSearch] = useState(false);
   const [smallSearch, setSmallSearch] = useState(false);
+  const [dropdown, setDropDown] = useState(false);
   const [logStatus, setLogStatus] = useState();
   const [search_Data, setSearch_Data] = useState("");
   const dispatch = useDispatch();
@@ -94,11 +96,17 @@ function Nav() {
               />
             </div>
             <div className="w-2/3 mx-auto">
-              <div onClick={() => navigate("/profile")}>
+              <div onClick={() => setDropDown(!dropdown)}>
                 <img className="mx-auto" src="user.png" alt="" />
               </div>
               <div className="userprice text-center mt-4 text-sm">
                 $$: Rs 200
+              </div>
+              <div className="absolute bg-white top-24 right-0" style={{display: dropdown ? "block" : "none"}}>
+                <div className="list_1 py-4 text-center px-8">Dashboard</div>
+                <div className="list_1 py-4 text-center">Analytics</div>
+                <div className="list_1 py-4 text-center">Collaborate</div>
+                <div className="list_1 py-4 text-center">Plans</div>
               </div>
             </div>
           </div>
@@ -222,6 +230,13 @@ function Nav() {
                 ></i>
               </div> */}
             </div>
+            <div className="py-4 text-center">Dashboard</div>
+              <div className="py-4 text-center">Analytics</div>
+              <div className="py-4 text-center">Collaborate</div>
+              <div className="py-4 text-center">Plans</div>
+              <div className="flex py-8 justify-center" >
+                  <CreateNft back={"#FFFF0A"} color={"#000000"} />
+              </div>
             <div
               className="mt-14"
               style={{ display: logStatus === "true" ? "none" : "block" }}
@@ -242,9 +257,9 @@ function Nav() {
               </div>
               <div>
                 <div className="flex justify-center my-4">
-                  <img src="user.png" alt="" />
+                  <img className="w-14" src="user.png" alt="" />
                 </div>
-                <div className="userprice  text-center mt-4 w-full mx-auto bg-gray-200">
+                <div className="userprice text-center mt-4 w-4/5 mx-auto bg-gray-200 text-sm">
                   $$: Rs 200
                 </div>
               </div>

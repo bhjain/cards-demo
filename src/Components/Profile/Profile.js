@@ -68,18 +68,18 @@ function Profile() {
                     </div>
                 </div>
             </div>
-            <div className="w-2/3 md:w-full px-20 md:px-4">
+            <div className="w-2/3 md:w-full px-20 lg:px-4 sm:w-full">
                 <div className="flex justify-center md:w-full">
-                    <div className="prof_btn flex w-2/4 py-4 justify-center items-center px-2" style={{backgroundColor: "#C2C2C2", borderRadius: "30px"}}>
+                    <div className="prof_btn flex w-2/4 py-4 sm:py-2 justify-center items-center px-2 sm:w-full" style={{backgroundColor: "#C2C2C2", borderRadius: "30px"}}>
                         <div className="w-full text-center" style={{borderRight: "1px solid #000000"}}>
-                            <button>Collection</button>
+                            <button style={{fontSize: "18px"}}>Collection</button>
                         </div>
                         <div className="w-full text-center">
-                            <button>Creations</button>
+                            <button style={{fontSize: "18px"}}>Creations</button>
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-24 my-20 mx-8 md:gap-10 md:mx-4 lg:gap-14 lg:mx-6 sm:grid-cols-1">
+                <div className="grid grid-cols-2 gap-24 my-8 mx-8 md:gap-10 md:mx-4 lg:gap-14 lg:mx-6 sm:grid-cols-1">
                     {user_card.map((element) => (
                         <ProfileCard props={element} />
                     ))}

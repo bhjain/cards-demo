@@ -1,5 +1,6 @@
 import React from 'react';
-import Card from '../Cards/Card';
+import BidsCard from '../Cards/BidsCard';
+// import Yourbids from '../Cards/Yourbids';
 import './YourBides.css';
 const yourbides_cards = [
     {
@@ -17,7 +18,7 @@ const yourbides_cards = [
     },
     {
       img: "card3.png",
-      heading: "Abstract Art",
+      heading: "Indian street vendor",
       price: "RS 200",
       owner: {
         ownerimg: "owner.png",
@@ -30,7 +31,7 @@ const yourbides_cards = [
     },
     {
       img: "card2.png",
-      heading: "Abstract Art",
+      heading: "Block Head Punk",
       price: "RS 200",
       owner: {
         ownerimg: "owner.png",
@@ -48,7 +49,7 @@ function YourBides() {
             <h2 className="text-center font-bold py-8" style={{fontSize: "3rem"}}>Your Bids</h2>
             <div style={{ display: "flex", justifyContent: "center" }}>
                 <div
-                className="grid grid-cols-3 md:grid-cols-2 justify-between gap-14  my-8 sm:grid-cols-1 pb-14"
+                className="grid grid-cols-3 md:grid-cols-2 justify-between gap-14  my-2 sm:grid-cols-1 pb-14"
                 style={{ width: "80%" }}
                 >
                 {/* <Card props={card1} />
@@ -59,7 +60,7 @@ function YourBides() {
                         <Card props={card1} />
                         <Card props={card1} /> */}
                 {yourbides_cards.map((element) => (
-                    <Card props={element} />
+                    <BidsCard props={element} />
                 ))}
                 </div>
             </div>

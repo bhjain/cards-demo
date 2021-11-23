@@ -9,7 +9,7 @@ function CreateNew({ back, color }) {
     return (
       <div>
         <div
-          className="login w-32 h-8 flex items-center justify-center lg:w-28 lg:h-8"
+          className="login w-40 h-8 flex items-center justify-center lg:w-28 lg:h-8"
           style={{ backgroundColor: `${back}`, color: `${color}` }}
         >
           <Link to="/creatorspace">

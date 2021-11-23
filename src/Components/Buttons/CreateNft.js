@@ -8,10 +8,7 @@ function CreateNft({ back, color }) {
 
     return (
       <div>
-        <div
-          className="login w-32 h-8 flex items-center justify-center lg:w-28 lg:h-8 sm:w-20"
-          style={{ backgroundColor: `${back}`, color: `${color}` }}
-        >
+        <div className="login w-32 h-10 flex items-center justify-center md:w-28 md:h-8" style={{backgroundColor: `${back}`, color: `${color}`}}>
           <Link to="/createNft">
             <button
               className="font-medium text-sm sm:text-xs"

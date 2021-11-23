@@ -54,7 +54,7 @@ function CreateNft(props) {
   ]);
 
   return (
-      <div className="my-14">
+      <div className="mt-10 mb-4">
         <div className="w-4/5 mx-auto p-2" style={{backgroundColor: "#C2C2C2"}}>
             <div {...getRootProps({style})}>
                 <input {...getInputProps()} />
@@ -63,13 +63,13 @@ function CreateNft(props) {
             </div>
         </div>
 
-        <div className="data w-4/5 mx-auto mt-14">
+        <div className="data w-4/5 mx-auto mt-10 sm:mt-6">
             <form className="flex-col" action="">
                 <input className="img_input w-full mb-4 py-2 px-4" type="text" placeholder="Title" />
-                <textarea className="w-full mt-4 px-4 py-2" id="w3review" name="w3review" rows="5" cols="50" placeholder="Description"></textarea>
+                <textarea className="w-full mt-2 px-4 py-2" id="w3review" name="w3review" rows="5" cols="50" placeholder="Description"></textarea>
             </form>
         </div>
-        <div className="flex justify-center mt-8 md:flex-col">
+        <div className="flex justify-center mt-4 md:flex-col">
             <div className="text-center mr-4 md:mx-auto md:m-0">
                 <div className="price_btn flex w-56 justify-center items-center bg-white p-4 mb-2 md:p-3">
                     <h4 className="w-3/6 text-center font-bold" style={{borderRight: "1px solid #C2C2C2"}}>Price</h4>
@@ -86,7 +86,7 @@ function CreateNft(props) {
             </div>
         </div>
 
-        <div className="my-20 pb-40">
+        <div className="mt-20 mb-1 pb-8">
             <h4 className="text-2xl w-2/6 mx-auto md:w-5/6 md:text-center md:text-xl">Service fee <span className="font-bold">0% <br></br></span>You will receive <span className="font-bold">0.0 NFC <span className="text-sm">0 Rs </span></span></h4>
             <div className="flex justify-center mt-10">
                 <Mint back={'#FFFF0A'} color={'#000000'} />

@@ -6,17 +6,17 @@ import './Nft.css'
 
 function Nft() {
     return (
-        <div className="pt-14 pb-24">
+        <div className="pt-14 pb-8">
             <div className="main_img mx-auto w-4/5 bg-black py-4 sm:w-full">
                 <img className="mx-auto" src="card1.png" alt="" />
             </div>
-            <div className="w-4/5 flex mx-auto my-8 md:flex-col sm:w-full">
+            <div className="w-4/5 flex mx-auto my-4 md:flex-col sm:w-full">
                 <div className="mx-auto">
-                    <p style={{color: "#C2C2C2"}}>Share this creation</p>
+                    <p className="text-sm" style={{color: "#C2C2C2", fontWeight: "900"}}>Share this creation</p>
                     <div className="social_media_logo flex gap-4 justify-center mt-2">
-                        <img src="facebook_logo.png" alt="facebook" />
-                        <img src="insta_logo.png" alt="instagram" />
-                        <img src="tweet_logo.png" alt="tweeter" />
+                        <img className="w-6 h-6" src="facebook_logo.png" alt="facebook" />
+                        <img className="w-6 h-6" src="insta_logo.png" alt="instagram" />
+                        <img className="w-6 h-6" src="tweet_logo.png" alt="tweeter" />
                     </div>
                 </div>
                 <div className="mx-auto text-center pt-14">
@@ -32,7 +32,7 @@ function Nft() {
                     </div>
                 </div>
                 <div className="mx-auto">
-                    <div className="right w-3/5 mb-6">
+                    <div className="right w-3/5 mb-6 mx-auto md:flex md:w-full md:items-center md:justify-center">
                         <div className="Owner flex justify-center mx-2 items-center gap-3">
                             <img src="owner.png" alt="" style={{width: "31px", height: "31px"}} />
                             <div>
@@ -40,15 +40,17 @@ function Nft() {
                                 <p className="text-xs" style={{position: "relative", left: "16px"}}>NAME</p>
                             </div>
                         </div>
-                        <div className="Creator flex justify-center items-center mt-4 mx-2 gap-3">
+                        <div className="Creator flex justify-center items-center mt-4 mx-2 gap-3 md:mt-0">
                             <img src="owner.png" alt="" style={{width: "31px", height: "31px"}} />
                             <div>
-                                <h4 className="font-bold">Owner</h4>
+                                <h4 className="font-bold">Creator</h4>
                                 <p className="text-xs" style={{position: "relative", left: "16px"}}>NAME</p>
                             </div>
                         </div>
                     </div>
-                    <Authentic back={"#000000"} color={"#FFF"} />
+                    <div className="flex justify-center">
+                        <Authentic back={"#000000"} color={"#FFF"} />
+                    </div>
                 </div>
             </div>
             <div
@@ -59,7 +61,7 @@ function Nft() {
                 <div className="w-6/12 bg-black mr-10 md:w-10/12 md:mx-auto">
                     <img className="mx-auto" src="card1.png" alt="" />
                 </div>
-                <div className="w-5/12 md:w-10/12 text-center md:my-4 md:mx-auto">
+                <div className="w-5/12 md:w-10/12 md:my-4 md:mx-auto">
                     <div className="text-3xl font-bold pb-8">Description</div>
                     <p>Yes, so please your Majesty. I did go between them, as I said; but more than that, he loved her-for indeed he was mad for her, and talk'd of Satan, and of Limbo, and of Furies, and I know not what.  No, fair Princess; he is the general challenger.  I thank it. More, I prithee, more. I can suck melancholy out of a song, as a weasel sucks eggs.
  More, I prithee, more. He saves my labour by his own approach. </p>
@@ -81,7 +83,7 @@ function Nft() {
                     </div>
 
                     <div>
-                        <h2 className="text-center font-bold">Rs 200</h2>
+                        <h2 className="text-center font-bold text-2xl">Rs 200</h2>
                         <div>
                             <div className="mx-auto" style={{width: "40px"}}>
                                 <div className="flex justify-center">
