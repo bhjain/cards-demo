@@ -131,7 +131,7 @@ function Footer() {
 
           {/* ------------------ */}
           <h4 style={{ fontWeight: "900", fontSize: "18px" }}>Company</h4>
-          <div className="text-center w-full flex justify-around space-x-1.5 flex-wrap">
+          <div className="text-center w-full flex justify-around space-x-1 flex-wrap">
             <p>
               <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
                 Privacy Policy

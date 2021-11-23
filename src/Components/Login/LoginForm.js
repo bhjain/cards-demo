@@ -8,7 +8,7 @@ function LoginForm() {
   const globalState = useSelector((state) => state);
   const dispatch = useDispatch();
   // console.log(globalState, "<<<<<<<<<<<<<<<<<<");
-  if (!globalState.SHOW_SEARCH_INPUT) {
+  if (globalState.SHOW_SEARCH_INPUT) {
     return (
       <div
         className="flex justify-center  md:items-start items-center pt-10 pb-20 md:pb-10 fade-up"
@@ -63,11 +63,14 @@ function LoginForm() {
               className="md:hidden"
               style={{ fontSize: "2vw", fontWeight: "900" }}
             >
-              Log In 2
-            </h4>
-            <h4 className="hidden md:block font-bold text-lg text-center">
               Log In
             </h4>
+            <Link to="discover">
+              <h4 className="hidden md:block font-bold text-lg text-center">
+                Log In5
+              </h4>
+            </Link>
+
             <p className="my-14 text-center md:my-6 md:w-full w-4/5  ">
               Sign In With Google
             </p>
@@ -123,7 +126,9 @@ function LoginForm() {
               </form>
             </div>
             <div className="flex justify-center w-4/5 md:w-full">
-              <Login back={"#FFFF0A"} color={"#000000"} />
+              
+                <Login onCli back={"#FFFF0A"} color={"#000000"} />
+              
             </div>
             <p className="w-4/5 text-center pt-4 text-xs md:w-full">
               Dont have an account?{" "}
@@ -141,7 +146,9 @@ function LoginForm() {
         className="flex justify-center  md:items-start items-center pt-10 pb-20 md:pb-10 fade-up"
         style={{ minHeight: "90vh" }}
       >
-        <div className="w-3/5 text-center">Search Suggestions Will show here</div>
+        <div className="w-3/5 text-center">
+          Search Suggestions Will show here
+        </div>
         {/* <div>Hello</div>
         <div>Hello</div>
         <div>Hello</div>

@@ -87,7 +87,11 @@ function Nav() {
             style={{ display: logStatus === "true" ? "flex" : "none" }}
           >
             <div className="1/3">
-              <Create back={"#FFFF00"} color={"#000000"} place={"/creatorspace"} />
+              <Create
+                back={"#FFFF00"}
+                color={"#000000"}
+                place={"/creatorspace"}
+              />
             </div>
             <div className="w-2/3 mx-auto">
               <div onClick={() => navigate("/profile")}>
@@ -103,7 +107,7 @@ function Nav() {
 
       {/* Small screen view */}
       <div className="smallScreen hidden lg:block ">
-      {/* <div className="smallScreen "> */}
+        {/* <div className="smallScreen "> */}
         <div className="flex items-center justify-between">
           <div
             className="10/12 flex items-center "
@@ -121,17 +125,13 @@ function Nav() {
               className="creator px-4 py-4 text-center md:px-1"
               style={{ fontSize: "4vw" }}
             >
-              <Link to="/creator">
-                Creator
-              </Link>
+              <Link to="/creator">Creator</Link>
             </div>
             <div
               className="discover px-4 py-4 text-center md:px-1"
               style={{ fontSize: "4vw", fontFamily: "grat" }}
             >
-              <Link to="discover">
-                Discover
-              </Link>
+              <Link to="discover">Discover</Link>
             </div>
           </div>
           {/* <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}> */}
@@ -140,7 +140,7 @@ function Nav() {
             className="small-mid w-full justify-between items-center absolute top-0 py-4 px-2 flex"
             style={{ display: smallSearch ? "flex" : "none" }}
           >
-            <div className="sm_search_box flex items-center pl-2 w-11/12">
+            <div className="sm_search_box flex justify-end items-center pl-2 w-11/12">
               <img src="search.png" alt="" />
               <input type="text" placeholder="Search" className="h-10" />
             </div>
@@ -250,8 +250,8 @@ function Nav() {
                     fontSize: "15px",
                     border: "1px solid grey",
                     borderRadius: "50%",
-                    width:"18px",
-                    height:"18px"
+                    width: "18px",
+                    height: "18px",
                   }}
                   onClick={() => setSideNav(!sidNav)}
                 ></i>

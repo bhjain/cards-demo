@@ -1,5 +1,6 @@
 export const Discover_Data = [
   {
+    id: 1,
     img: "card1.png",
     heading: "Abstract Art",
     price: 30,
@@ -13,6 +14,7 @@ export const Discover_Data = [
     },
   },
   {
+    id: 2,
     img: "card2.png",
     heading: "Abstract Art",
     price: 100,
@@ -26,6 +28,7 @@ export const Discover_Data = [
     },
   },
   {
+    id: 3,
     img: "card1.png",
     heading: "Abstract Art",
     price: 50,
@@ -39,6 +42,7 @@ export const Discover_Data = [
     },
   },
   {
+    id: 4,
     img: "card2.png",
     heading: "Abstract Art",
     price: 200,
@@ -52,6 +56,7 @@ export const Discover_Data = [
     },
   },
   {
+    id: 5,
     img: "card1.png",
     heading: "Abstract Art",
     price: 200,
@@ -65,6 +70,7 @@ export const Discover_Data = [
     },
   },
   {
+    id: 6,
     img: "card2.png",
     heading: "Abstract Art",
     price: 1000,
@@ -78,6 +84,7 @@ export const Discover_Data = [
     },
   },
   {
+    id: 7,
     img: "card1.png",
     heading: "Abstract Art",
     price: 600,
@@ -103,11 +110,11 @@ export const low_to_high = (a, b) => {
 };
 
 export const high_to_low = (a, b) => {
-    if (a.price < b.price) {
-        return 1;
-      }
-      if (a.price > b.price) {
-        return -1;
-      }
-      return 0;
+  if (a.price < b.price) {
+    return 1;
+  }
+  if (a.price > b.price) {
+    return -1;
+  }
+  return 0;
 };

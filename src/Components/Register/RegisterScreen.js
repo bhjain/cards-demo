@@ -56,6 +56,7 @@ function RegisterScreen() {
           </div>
           <div className="log_form_right w-1/2 md:w-full pl-8 py-8 md:pl-2 md:pt-4">
             <h4
+              // className="md:hidden"
               className="md:hidden"
               style={{ fontSize: "2vw", fontWeight: "900" }}
             >
@@ -64,9 +65,9 @@ function RegisterScreen() {
             <h4 className="hidden md:block font-bold text-lg text-center">
               Sign Up
             </h4>
-            <p className="my-14 text-center md:my-6">Sign In With Google</p>
+            <p className="my-14 text-center md:my-6 md:w-full w-4/5">Sign In With Google</p>
             <p
-              className="text-center md:hidden"
+              className="text-center md:hidden my-14 text-center md:my-6 md:w-full w-4/5"
               style={{ color: "#C4C4C4", fontSize: "2vw", fontWeight: "900" }}
             >
               Or

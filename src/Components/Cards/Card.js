@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Card.css';
-
+import {
+    useParams
+  } from "react-router-dom";
+// import Discover_Data from "../Discover/Discover_data"
 function Card({props}) {
+    console.log()
+// useEffect(() => {
+//     let { id } = useParams();
+//     const Nft=Discover_Data.filter((id)=>{
+
+//     })
+
+// }, [])
     console.log(props);
     return (
         <div className="singleCard">

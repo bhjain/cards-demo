@@ -12,6 +12,7 @@ import {
 } from "tailwind-mobile/react";
 import "./discover.css";
 import { Discover_Data, high_to_low, low_to_high } from "./Discover_data";
+import { Link } from "react-router-dom";
 
 function Discover() {
   const [ShowDrop, setShowDrop] = useState(false);
@@ -257,7 +258,9 @@ function Discover() {
                 <Card props={card1} />
                 <Card props={card1} /> */}
           {DATA.CURRENT.map((element) => (
-            <Card props={element} />
+            <Link to={`/nftpage/${element.id}`}>
+              <Card props={element} />
+            </Link>
           ))}
         </div>
       </div>

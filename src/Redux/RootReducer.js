@@ -1,5 +1,5 @@
 // import ACTION from "./Action"
-import { CHECK, SHOW_SEARCH_INPUT } from "./ACTION";
+import { CHECK, SHOW_SEARCH_INPUT, LOGGED_IN_USER } from "./ACTION";
 
 const initialState = {
   CHECK: "true",
@@ -13,6 +13,11 @@ const rootReducer = (state = initialState, Action) => {
     case CHECK:
       {
         return { ...state, CHECK: Action.payload };
+      }
+      break;
+    case LOGGED_IN_USER:
+      {
+        return { ...state, LOGGED_IN_USER: Action.payload };
       }
       break;
     case SHOW_SEARCH_INPUT: {
