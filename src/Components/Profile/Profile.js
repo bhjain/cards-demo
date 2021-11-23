@@ -70,7 +70,7 @@ function Profile() {
             </div>
             <div className="w-2/3 md:w-full px-20 lg:px-4 sm:w-full">
                 <div className="flex justify-center md:w-full">
-                    <div className="prof_btn flex w-2/4 py-4 sm:py-2 justify-center items-center px-2 sm:w-full" style={{backgroundColor: "#C2C2C2", borderRadius: "30px"}}>
+                    <div className="prof_btn flex w-2/4 py-4 sm:py-2 justify-center items-center px-2 sm:w-full" style={{backgroundColor: "#C2C2C2", borderRadius: "30px",}}>
                         <div className="w-full text-center" style={{borderRight: "1px solid #000000"}}>
                             <button style={{fontSize: "18px"}}>Collection</button>
                         </div>

@@ -5,8 +5,9 @@ import Register from "../Buttons/Register";
 import { Link, useNavigate } from "react-router-dom";
 import Create from "../Buttons/Create";
 // import OutsideClickHandler from "react-outside-click-handler";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CreateNft from "../Buttons/CreateNft";
+import { LOGGED_IN_USER } from "../../Redux/ACTION";
 // import { SHOW_SEARCH_INPUT } from "../../Redux/ACTION";
 
 function Nav() {
@@ -21,26 +22,38 @@ function Nav() {
   useEffect(() => {
     setLogStatus(localStorage.getItem("login"));
   }, []);
+  // const loginStatus = useSelector(state => state.LOGGED_IN_USER)
+  const checkLoggedIn = useSelector((state) => state.LOGGED_IN_USER);
+  // const checkLoggedIn = localStorage.getItem("login");
 
   // console.log(logStatus);
   // setTimeout(function() { your_func(); }, 5000);
 
   return (
     // Navbar
-    <div className="navigation">
+    <div
+      className="navigation "
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
+        overflow: "none",
+        backgroundColor: "#E5E5E5",
+      }}
+    >
       {/* Large screen view */}
-      <div className="largeScreen flex lg:hidden py-2 justify-between px-4">
+      <div className="largeScreen flex lg:hidden  justify-between px-4">
         <div className="navLeft flex items-center justify-between w-4/12">
           <div className="logo">
             <Link to="/">
               <img src="nft-logo.png" alt="" />
             </Link>
           </div>
-          <Link to="/creator">
-            <div className="creator px-3">Creators</div>
-          </Link>
           <Link to="/discover">
             <div className="discover px-3">Discover</div>
+          </Link>
+          <Link to="/creator">
+            <div className="creator px-3">Creators</div>
           </Link>
         </div>
 
@@ -75,7 +88,7 @@ function Nav() {
           </div>
           <div
             className="mt-4 w-1/4 mx-4 px-4"
-            style={{ display: logStatus === "true" ? "none" : "block" }}
+            style={{ display: checkLoggedIn ? "none" : "block" }}
           >
             <Link to="/login">
               <Login back={"#000000"} color={"#FFF"} />
@@ -86,7 +99,7 @@ function Nav() {
           </div>
           <div
             className="user_prof items-center gap-8 flex justify-between mr-4"
-            style={{ display: logStatus === "true" ? "flex" : "none" }}
+            style={{ display: checkLoggedIn ? "flex" : "none" }}
           >
             <div className="1/3">
               <Create
@@ -97,16 +110,61 @@ function Nav() {
             </div>
             <div className="w-2/3 mx-auto">
               <div onClick={() => setDropDown(!dropdown)}>
-                <img className="mx-auto" src="user.png" alt="" />
+                {(() => {
+                  if (checkLoggedIn) {
+                    return <img className="mx-auto" src="user.png" alt="" />;
+                  } else {
+                    return (
+                      <div>
+                        <div
+                          className="text-center bg-black text-white my-1 px-4 py-1"
+                          style={{
+                            border: "1px solid black",
+                            borderRadius: "10px",
+                          }}
+                        >
+                          {" "}
+                          Sign Up
+                        </div>
+                        <div
+                          className="text-center bg-white text-black my-1 px-4 py-1"
+                          style={{
+                            border: "1px solid white",
+                            borderRadius: "10px",
+                          }}
+                        >
+                          {" "}
+                          Login
+                        </div>
+                      </div>
+                    );
+                  }
+                })()}
+                {/* <img className="mx-auto" src="user.png" alt="" /> */}
               </div>
               <div className="userprice text-center mt-4 text-sm">
                 $$: Rs 200
               </div>
-              <div className="absolute bg-white top-24 right-0" style={{display: dropdown ? "block" : "none"}}>
-                <div className="list_1 py-4 text-center px-8">Dashboard</div>
-                <div className="list_1 py-4 text-center">Analytics</div>
-                <div className="list_1 py-4 text-center">Collaborate</div>
-                <div className="list_1 py-4 text-center">Plans</div>
+              <div
+                className="absolute bg-white top-24 right-0"
+                style={{ display: dropdown ? "block" : "none" }}
+              >
+                <Link to="/dashboard">
+                  <div className="list_1 py-2 text-center px-8">Dashboard</div>
+                </Link>
+                <div className="list_1 py-2 text-center">Analytics</div>
+                <div className="list_1 py-2 text-center">Collaborate</div>
+                <div className="list_1 py-2 text-center">Plans</div>
+                <div
+                  className="list_1 py-2 text-center"
+                  onClick={() => {
+                    setLogStatus(false);
+                    // localStorage.setItem("login", false);
+                    dispatch({ type: LOGGED_IN_USER, payload: false });
+                  }}
+                >
+                  Logout
+                </div>
               </div>
             </div>
           </div>
@@ -217,7 +275,7 @@ function Nav() {
             style={{ minHeight: "100vh" }}
           >
             <div className="logo flex justify-between px-4 items-center">
-              <img className="w-4/5" src="nft-logo.png" alt="" />
+              <img className="w-5/5" src="nft-logo.png" alt="" />
               {/* <div className="w-1/5">
                 <i
                   className="fas fa-times"
@@ -230,13 +288,15 @@ function Nav() {
                 ></i>
               </div> */}
             </div>
-            <div className="py-4 text-center">Dashboard</div>
-              <div className="py-4 text-center">Analytics</div>
-              <div className="py-4 text-center">Collaborate</div>
-              <div className="py-4 text-center">Plans</div>
-              <div className="flex py-8 justify-center" >
-                  <CreateNft back={"#FFFF0A"} color={"#000000"} />
-              </div>
+            <Link to="/dashboard">
+              <div className="py-2 text-center">Dashboard</div>
+            </Link>
+            <div className="py-2 text-center">Analytics</div>
+            <div className="py-2 text-center">Collaborate</div>
+            <div className="py-2 text-center">Plans</div>
+            {/* <div className="flex py-8 justify-center">
+              <CreateNft back={"#FFFF0A"} color={"#000000"} />
+            </div> */}
             <div
               className="mt-14"
               style={{ display: logStatus === "true" ? "none" : "block" }}
@@ -253,11 +313,15 @@ function Nav() {
               style={{ display: logStatus === "true" ? "block" : "none" }}
             >
               <div className="flex justify-center">
-                <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
+                <Link to="/creatorspace">
+                  <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
+                </Link>
               </div>
               <div>
                 <div className="flex justify-center my-4">
-                  <img className="w-14" src="user.png" alt="" />
+                  <Link to="/profile">
+                    <img className="w-14" src="user.png" alt="" />
+                  </Link>
                 </div>
                 <div className="userprice text-center mt-4 w-4/5 mx-auto bg-gray-200 text-sm">
                   $$: Rs 200

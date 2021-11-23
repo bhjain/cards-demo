@@ -6,7 +6,7 @@ function Collection({props}) {
             <div className="cardimg">
                 <img className="w-full" style={{margin: "0"}} src={props.img} alt="" />
             </div>
-            <div className="cardheading text-center font-bold text-lg my-6">
+            <div className="cardheading text-center font-bold text-lg my-4">
                 {props.heading}
                 <p className="my-2">{props.subHeading}</p>
                 <div className="px-3 text-sm">

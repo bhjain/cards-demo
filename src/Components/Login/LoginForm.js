@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 import Login from "../Buttons/Login";
 import { useSelector, useDispatch } from "react-redux";
+import { LOGGED_IN_USER } from "../../Redux/ACTION";
 
 function LoginForm() {
   const globalState = useSelector((state) => state);
   const dispatch = useDispatch();
   // console.log(globalState, "<<<<<<<<<<<<<<<<<<");
-  if (globalState.SHOW_SEARCH_INPUT) {
+  if (!globalState.SHOW_SEARCH_INPUT) {
     return (
       <div
         className="flex justify-center  md:items-start items-center pt-10 pb-20 md:pb-10 fade-up"
@@ -126,9 +127,9 @@ function LoginForm() {
               </form>
             </div>
             <div className="flex justify-center w-4/5 md:w-full">
-              
-                <Login onCli back={"#FFFF0A"} color={"#000000"} />
-              
+              <Link to="/discover">
+                <Login back={"#FFFF0A"} color={"#000000"} />
+              </Link>
             </div>
             <p className="w-4/5 text-center pt-4 text-xs md:w-full">
               Dont have an account?{" "}
