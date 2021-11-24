@@ -46,7 +46,7 @@ function Nav() {
         <div className="navLeft flex items-center justify-between w-4/12">
           <div className="logo">
             <Link to="/">
-              <img src="nft-logo.png" alt="" />
+              <img src="/nft-logo.png" alt="" />
             </Link>
           </div>
           <Link to="/discover">
@@ -71,14 +71,14 @@ function Nav() {
               }, 5000);
             }}
           >
-            <img src="search.png" alt="" />
+            <img src="/search.png" alt="" />
           </div>
 
           <div
             className="search_box flex items-center mr-8"
             style={{ display: search ? "flex" : "none" }}
           >
-            <img src="search.png" alt="" />
+            <img src="/search.png" alt="" />
             <input
               value={search_Data}
               onChange={(e) => setSearch_Data(e.target.value)}
@@ -112,7 +112,7 @@ function Nav() {
               <div onClick={() => setDropDown(!dropdown)}>
                 {(() => {
                   if (checkLoggedIn) {
-                    return <img className="mx-auto" src="user.png" alt="" />;
+                    return <img className="mx-auto" src="/user.png" alt="" />;
                   } else {
                     return (
                       <div>
@@ -183,7 +183,7 @@ function Nav() {
             <div className="small-left">
               <div className="logo">
                 <Link to="/">
-                  <img className="w-40 sm:w-32" src="nft-logo.png" alt="" />
+                  <img className="w-40 sm:w-32" src="/nft-logo.png" alt="" />
                 </Link>
               </div>
             </div>
@@ -208,11 +208,11 @@ function Nav() {
           >
             <div className="logo w-3/120">
               <Link to="/">
-                <img className="w-40 sm:w-32" src="nft-logo.png" alt="" />
+                <img className="w-40 sm:w-32" src="/nft-logo.png" alt="" />
               </Link>
             </div>
             <div className="sm_search_box flex items-center pl-2 w-8/12">
-              <img src="search.png" alt="" />
+              <img src="/search.png" alt="" />
               <input type="text" placeholder="Search" className="h-10" />
             </div>
             <div className="w-1/12 pl-2">
@@ -244,7 +244,7 @@ function Nav() {
                 dispatch({ type: "SHOW_SEARCH_INPUT", payload: true });
               }}
             >
-              <img src="search.png" alt="" />
+              <img src="/search.png" alt="" />
             </div>
             <i
               className="fas fa-bars"
@@ -275,7 +275,7 @@ function Nav() {
             style={{ minHeight: "100vh" }}
           >
             <div className="logo flex justify-between px-4 items-center">
-              <img className="w-5/5" src="nft-logo.png" alt="" />
+              <img className="w-5/5" src="/nft-logo.png" alt="" />
               {/* <div className="w-1/5">
                 <i
                   className="fas fa-times"
@@ -320,7 +320,7 @@ function Nav() {
               <div>
                 <div className="flex justify-center my-4">
                   <Link to="/profile">
-                    <img className="w-14" src="user.png" alt="" />
+                    <img className="w-14" src="/user.png" alt="" />
                   </Link>
                 </div>
                 <div className="userprice text-center mt-4 w-4/5 mx-auto bg-gray-200 text-sm">
