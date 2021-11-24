@@ -39,11 +39,10 @@ function App() {
         {/* <Route path="/nftpageok" element={<Nft />} /> */}
         <Route path="/congrats" element={<Congracts />} />
         <Route path="/createnft" element={<CreateNft />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route path="/setting" element={<Setting />} />
         <Route path="/kyc" element={<Kyc />} />
-        <Route path="/dashboard" element={<Dashboard />
-      } />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/creatorspace" element={<CreatorSpace />} />
         {/* </div> */}
       </Routes>

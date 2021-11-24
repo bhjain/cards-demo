@@ -56,7 +56,7 @@ function Discover() {
   if (!globalState.SHOW_SEARCH_INPUT) {
     return (
       <>
-        <div className="mt-10" > 
+        <div className="mt-10">
           <div className="flex justify-between mx-10 sm:mx-4">
             <div className="filter w-28 text-center py-2 sm:w-32 sm:mb-8">
               {/* <button className="font-light">FILTER</button> */}
@@ -90,20 +90,21 @@ function Discover() {
                 </div>
 
                 <div
-                  style={{ display: ShowDrop ? "block" : "none" }}
-                  className="origin-top-right bg-black  absolute mt-3 left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
+                  style={{ display: ShowDrop ? "block" : "none",}}
+                  className="origin-top-right  absolute mt-2 left-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none "
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
                   tabindex="-1"
                 >
-                  <div className="px-4 bg-black text-center ">
+                  <div className="px-4 bg-white text-center " style={{border:"1px solid white",borderRadius:"20px"}}>
                     {/* <List
                     className="drop_option "
                     style={{ backgroundColor: "black !important" }}
                   > */}
                     {volume}
                     <ListItem
+                   
                       innerClassName="flex space-x-4"
                       innerChildren={
                         // <div className="flex-column">
@@ -177,9 +178,14 @@ function Discover() {
               </div>
 
               <div
-                style={{ display: ShowDrop_Sort_By ? "block" : "none" }}
+                style={{
+                  display: ShowDrop_Sort_By ? "block" : "none",
+                  width: "11rem",
+                  borderRadius: "15px",
+                  border:"1px solid white"
+                }}
                 // className="origin-top-right mt-3 absolute right-0 w-56 rounded-md shadow-lg bg-black text-white ring-1 ring-black ring-opacity-5 focus:ring-2"
-                className="origin-top-right absolute mt-4 w-56  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto sm:right-2"
+                className="origin-top-right absolute mt-3 py-2 bg-white shadow-2xl rounded-md  ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto sm:right-2"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
@@ -187,7 +193,7 @@ function Discover() {
               >
                 <div className="" role="none">
                   <div
-                    className="drop_option  text-gray-700 block px-4 py-2 text-sm hover:bg-gray-500 "
+                    className="drop_option  text-gray-700 block px-4 py-2 text-sm hover:bg-black hover:text-white "
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-0"
@@ -201,7 +207,7 @@ function Discover() {
                     Recent Product
                   </div>
                   <div
-                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-black hover:text-white"
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"
@@ -214,7 +220,7 @@ function Discover() {
                     Price (low-high)
                   </div>
                   <div
-                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-black hover:text-white"
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"
@@ -232,7 +238,8 @@ function Discover() {
                       backgroundColor: "gray",
                     }}
                     // href=""
-                    className="text-white block px-4 py-2 text-sm  hover:bg-gray-500  "
+                    className="drop_option  text-gray-700 block px-4 py-2 text-sm hover:bg-black hover:text-white "
+                    // className="text-white block px-4 py-2 text-sm  hover:bg-gray-500  "
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"

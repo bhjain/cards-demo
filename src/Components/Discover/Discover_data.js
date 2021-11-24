@@ -2,43 +2,43 @@ export const Discover_Data = [
   {
     id: 1,
     img: "card1.png",
-    heading: "Abstract Art",
+    heading: "Abstract Art 1",
     price: 30,
     owner: {
       ownerimg: "owner.png",
-      name: "John Doe",
+      name: "John Doe1",
     },
     creator: {
       creatorimg: "owner.png",
-      name: "John Doe",
+      name: "John Doe1",
     },
   },
   {
     id: 2,
     img: "card2.png",
-    heading: "Abstract Art",
+    heading: "Abstract Art 2",
     price: 100,
     owner: {
       ownerimg: "owner.png",
-      name: "John Doe",
+      name: "John Doe2",
     },
     creator: {
       creatorimg: "owner.png",
-      name: "John Doe",
+      name: "John Doe2",
     },
   },
   {
     id: 3,
     img: "card1.png",
-    heading: "Abstract Art",
+    heading: "Abstract Art3",
     price: 50,
     owner: {
       ownerimg: "owner.png",
-      name: "John Doe",
+      name: "John Doe3",
     },
     creator: {
       creatorimg: "owner.png",
-      name: "John Doe",
+      name: "John Doe3",
     },
   },
   {

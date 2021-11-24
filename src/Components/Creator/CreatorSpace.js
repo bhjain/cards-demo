@@ -8,15 +8,17 @@ import { Link } from "react-router-dom";
 
 function CreateNew() {
   return (
-    <div
-      className="create_new_card flex items-center justify-center text-center"
-      style={{ minHeight: "70vh" }}
-    >
-      <div>
-        <h2 className="text-center text-5xl">+</h2>
-        <h2 className="text-2xl">CREATE NEW</h2>
+    <Link to="/createnft">
+      <div
+        className="create_new_card flex items-center justify-center text-center"
+        style={{ minHeight: "70vh" }}
+      >
+        <div>
+          <h2 className="text-center text-5xl">+</h2>
+          <h2 className="text-2xl">CREATE NEW</h2>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -68,11 +70,13 @@ function CreatorSpace() {
           <p className="mx-14 my-4">Your Collections</p>
           <div className="1st_card_div grid grid-cols-2 gap-24 mx-14 lg:grid-cols-1">
             <CreateNew />
-            {<Collection props={collection_card[0]} />}sss
+            {<Collection props={collection_card[0]} />}
           </div>
           <p className="mx-14 my-14">Unatached Creation</p>
           <div className="1st_card_div grid grid-cols-2 gap-24 mx-14 lg:grid-cols-1">
-            <CreateNew />
+            <Link to="/createnft">
+              <CreateNew />
+            </Link>
             {<Card props={card_data[0]} />}
           </div>
           <div className="1st_card_div grid grid-cols-2 gap-24 mx-14 lg:grid-cols-1 my-10">

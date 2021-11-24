@@ -8,11 +8,11 @@ import { useParams } from "react-router-dom";
 function Nft() {
   const { id } = useParams();
   const [NftData, setNftData] = useState({});
-  //   useEffect(() => {
-  //     const nft = Discover_Data.filter((nft) => nft.id == id);
-  //     setNftData(nft[0]);
-  //     console.log(nft[0], "<<<<<console data");
-  //   }, []);
+  useEffect(() => {
+    const nft = Discover_Data.filter((nft) => nft.id == id);
+    setNftData(nft[0]);
+    console.log(nft[0], "<<<<<console data");
+  }, []);
 
   // const imageLoading={
   //     src=NftData?.img
@@ -26,7 +26,7 @@ function Nft() {
       >
         <img
           className="mx-auto"
-          src="/card1.png"
+          src={`/${NftData?.img}`}
           //   src={NftData.img}
           alt=""
           style={{ objectFit: "contain" }}
@@ -48,7 +48,7 @@ function Nft() {
         </div>
         <div className="mx-auto text-center pt-14">
           <h2 className="font-bold" style={{ fontSize: "2rem" }}>
-            Abstract Art
+            {NftData?.heading}
           </h2>
           <div
             className="mx-auto w-10/12 py-2"
@@ -56,7 +56,7 @@ function Nft() {
           ></div>
           <p className="pt-4">Reserve Price</p>
           <h2 className="font-bold" style={{ fontSize: "2rem" }}>
-            Rs 200
+            Rs {NftData?.price}
           </h2>
           <div className="flex justify-center py-4">
             <Bid back={"#FFFF00"} color={"#000000"} place={"/"} />
@@ -66,7 +66,7 @@ function Nft() {
           <div className="right w-3/5 mb-6 mx-auto md:flex md:w-full md:items-center md:justify-center">
             <div className="Owner flex justify-center mx-2 items-center gap-3">
               <img
-                src="/owner.png"
+                src={`/${NftData?.owner?.ownerimg}`}
                 alt=""
                 style={{ width: "31px", height: "31px" }}
               />
@@ -76,13 +76,13 @@ function Nft() {
                   className="text-xs"
                   style={{ position: "relative", left: "16px" }}
                 >
-                  NAME
+                  {NftData?.owner?.name}
                 </p>
               </div>
             </div>
             <div className="Creator flex justify-center items-center mt-4 mx-2 gap-3 md:mt-0">
               <img
-                src="/owner.png"
+                src={`/${NftData?.creator?.creatorimg}`}
                 alt=""
                 style={{ width: "31px", height: "31px" }}
               />
@@ -92,7 +92,7 @@ function Nft() {
                   className="text-xs"
                   style={{ position: "relative", left: "16px" }}
                 >
-                  NAME
+                  {NftData?.creator?.name}
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ function Nft() {
       ></div>
       <div className="w-10/12 mx-auto my-8 flex justify-between md:flex-col sm:w-full">
         <div className="w-6/12 bg-black mr-10 md:w-10/12 md:mx-auto">
-          <img className="mx-auto" src="/card1.png" alt="" />
+          <img className="mx-auto" src={`/${NftData?.img}`} alt="" />
         </div>
         <div className="w-5/12 md:w-10/12 md:my-4 md:mx-auto">
           <div className="text-3xl font-bold pb-8">Description</div>
@@ -141,7 +141,9 @@ function Nft() {
           </div>
 
           <div>
-            <h2 className="text-center font-bold text-2xl">Rs 200</h2>
+            <h2 className="text-center font-bold text-2xl">
+              Rs {NftData?.price}
+            </h2>
             <div>
               <div className="mx-auto" style={{ width: "40px" }}>
                 <div className="flex justify-center">
