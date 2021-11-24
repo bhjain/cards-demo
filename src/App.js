@@ -19,6 +19,8 @@ import Setting from "./Components/Setting/Setting";
 import Kyc from "./Components/Kyc/Kyc";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import CreatorSpace from "./Components/Creator/CreatorSpace";
+// import Bid from "./Components/YourBides/Bid";
+import BidPage from "./Components/YourBides/BidPage";
 
 function App() {
   return (
@@ -35,16 +37,16 @@ function App() {
         <Route path="/creator" element={<Creator />} />
         <Route path="/yourbides" element={<YourBides />} />
         <Route path="/nftpage/:id" element={<Nft />} />
-        {/* <Route path="/nftpage" element={<Nft />} /> */}
+        <Route path="/nftpage" element={<Nft />} />
         {/* <Route path="/nftpageok" element={<Nft />} /> */}
         <Route path="/congrats" element={<Congracts />} />
         <Route path="/createnft" element={<CreateNft />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/setting" element={<Setting />} />
         <Route path="/kyc" element={<Kyc />} />
-        <Route path="/dashboard" element={<Dashboard />
-      } />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/creatorspace" element={<CreatorSpace />} />
+        <Route path="/bid" element={<BidPage />} />
         {/* </div> */}
       </Routes>
       <Footer />
