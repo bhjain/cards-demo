@@ -26,7 +26,7 @@ function Nft() {
       >
         <img
           className="mx-auto"
-          src="card1.png"
+          src="/card1.png"
           //   src={NftData.img}
           alt=""
           style={{ objectFit: "contain" }}
@@ -41,9 +41,9 @@ function Nft() {
             Share this creation
           </p>
           <div className="social_media_logo flex gap-4 justify-center mt-2">
-            <img className="w-6 h-6" src="facebook_logo.png" alt="facebook" />
-            <img className="w-6 h-6" src="insta_logo.png" alt="instagram" />
-            <img className="w-6 h-6" src="tweet_logo.png" alt="tweeter" />
+            <img className="w-6 h-6" src="/facebook_logo.png" alt="facebook" />
+            <img className="w-6 h-6" src="/insta_logo.png" alt="instagram" />
+            <img className="w-6 h-6" src="/tweet_logo.png" alt="tweeter" />
           </div>
         </div>
         <div className="mx-auto text-center pt-14">
@@ -66,7 +66,7 @@ function Nft() {
           <div className="right w-3/5 mb-6 mx-auto md:flex md:w-full md:items-center md:justify-center">
             <div className="Owner flex justify-center mx-2 items-center gap-3">
               <img
-                src="owner.png"
+                src="/owner.png"
                 alt=""
                 style={{ width: "31px", height: "31px" }}
               />
@@ -82,7 +82,7 @@ function Nft() {
             </div>
             <div className="Creator flex justify-center items-center mt-4 mx-2 gap-3 md:mt-0">
               <img
-                src="owner.png"
+                src="/owner.png"
                 alt=""
                 style={{ width: "31px", height: "31px" }}
               />
@@ -108,7 +108,7 @@ function Nft() {
       ></div>
       <div className="w-10/12 mx-auto my-8 flex justify-between md:flex-col sm:w-full">
         <div className="w-6/12 bg-black mr-10 md:w-10/12 md:mx-auto">
-          <img className="mx-auto" src="card1.png" alt="" />
+          <img className="mx-auto" src="/card1.png" alt="" />
         </div>
         <div className="w-5/12 md:w-10/12 md:my-4 md:mx-auto">
           <div className="text-3xl font-bold pb-8">Description</div>
@@ -131,7 +131,7 @@ function Nft() {
         <div className="text-3xl font-bold pb-8 md:text-center">History</div>
         <div className="hist_div" style={{ backgroundColor: "#FFF" }}>
           <div className="flex items-center justify-center py-4">
-            <img src="owner.png" alt="" />
+            <img src="/owner.png" alt="" />
             <div className="pl-4">
               <div className="font-bold">
                 Listed by <span className="font-normal">Name</span>
@@ -185,7 +185,7 @@ function Nft() {
           </div>
 
           <div className="flex items-center justify-center py-4">
-            <img src="owner.png" alt="" />
+            <img src="/owner.png" alt="" />
             <div className="pl-4">
               <div className="font-bold">
                 Listed by <span className="font-normal">Name</span>

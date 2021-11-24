@@ -35,7 +35,7 @@ function App() {
         <Route path="/creator" element={<Creator />} />
         <Route path="/yourbides" element={<YourBides />} />
         <Route path="/nftpage/:id" element={<Nft />} />
-        <Route path="/nftpage" element={<Nft />} />
+        {/* <Route path="/nftpage" element={<Nft />} /> */}
         {/* <Route path="/nftpageok" element={<Nft />} /> */}
         <Route path="/congrats" element={<Congracts />} />
         <Route path="/createnft" element={<CreateNft />} />
