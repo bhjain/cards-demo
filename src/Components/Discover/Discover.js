@@ -90,19 +90,19 @@ function Discover() {
                 </div>
 
                 <div
-                  style={{ display: ShowDrop ? "block" : "none" }}
-                  className="origin-top-right bg-black  absolute mt-3 left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
+                  style={{ display: ShowDrop ? "block" : "none", color: "#000000", width: "50vw"}}
+                  className="origin-top-right absolute left-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
                   tabindex="-1"
                 >
-                  <div className="px-4 bg-black text-center ">
+                  {/* <div className="px-4 bg-black text-center "> */}
                     {/* <List
                     className="drop_option "
                     style={{ backgroundColor: "black !important" }}
                   > */}
-                    {volume}
+                    {/* {volume}
                     <ListItem
                       innerClassName="flex space-x-4"
                       innerChildren={
@@ -131,8 +131,51 @@ function Discover() {
 
                         // </div>
                       }
-                    />
+                    /> */}
                     {/* </List> */}
+                  {/* </div> */}
+
+
+
+                  <div className="p-4 z-888">
+                    <div className="my-4">
+                      <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Status</h2>
+                      <div className="gap-4">
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Buy Now</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">On Auction</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Sold</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Has Offers</button>
+                      </div>
+                    </div>
+                    <div className="my-4">
+                      <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Price <span className="text-sm font-extrabold">(In INR)</span></h2>
+                      <div className="gap-4">
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Min</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Max</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Apply</button>
+                      </div>
+                    </div>
+                    <div className="my-4">
+                      <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Market</h2>
+                      <div className="gap-4">
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Primary</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Secondary</button>
+                      </div>
+                    </div>
+                    <div className="my-4">
+                      <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Categories</h2>
+                      <div className="gap-4">
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Art</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Music</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Music</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Utility</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Brands</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Influencers</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Photography</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Collectables</button>
+                        <button className="filter_btn py-1 px-6 my-2 mx-2">Memes</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 {/* <div className="absolute bg-red-500" style={{width: "50vw"}}>
