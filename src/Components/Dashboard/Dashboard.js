@@ -62,28 +62,28 @@ function Dashboard() {
           </h2>
 
           <i
-            className="fas fa-bars"
+            className="fas fa-bars hidden md:block pl-4"
             style={{ fontSize: "20px" }}
             onClick={() => {
               // setSideNav(!sidNav);
               setDropdown(!dropdown);
             }}
           ></i>
-          <div  className="flex  w-full shadow-md">
+          <div  className="flex  w-full shadow-md shadow-sm">
           <div
-            clsssName="w-1/2 text-start"
+            clsssName="w-1/2 text-start shadow-md shadow-sm "
             style={{display:dropdown?"block":"none"}}
             // className="absolute bg-white top-24 right-0"
           >
             <Link to="/dashboard">
-              <div className="list_1 py-2 text-center px-8">Dashboard</div>
+              <div className="list_1 py-2 pl-4 px-8">Dashboard</div>
             </Link>
-            <div className="list_1 py-2 text-center">Analytics</div>
-            <div className="list_1 py-2 text-center">Collaborate</div>
-            <div className="list_1 py-2 text-center">Plans</div>
+            <div className="list_1 py-2  pl-4">Analytics</div>
+            <div className="list_1 py-2  pl-4">Collaborate</div>
+            <div className="list_1 py-2  pl-4">Plans</div>
           </div>
           </div>
-          <p className="text-sm my-10 sm:my-4">Sales Overview</p>
+          <p className="text-sm my-10 sm:my-4 px-4">Sales Overview</p>
           <div className="flex lg:flex-col">
             <div className="w-1/2 lg:w-2/3 lg:my-10 bg-white md:w-full mx-auto sm:my-4">
               {/* <img src="image_chart.png" alt="" /> */}

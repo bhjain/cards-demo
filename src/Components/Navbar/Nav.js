@@ -276,27 +276,17 @@ function Nav() {
           >
             <div className="logo flex justify-between px-4 items-center">
               <img className="w-5/5" src="/nft-logo.png" alt="" />
-              {/* <div className="w-1/5">
-                <i
-                  className="fas fa-times"
-                  style={{
-                    fontSize: "15px",
-                    border: "1px solid grey",
-                    borderRadius: "2px",
-                  }}
-                  onClick={() => setSideNav(!sidNav)}
-                ></i>
-              </div> */}
+
             </div>
-            <Link to="/dashboard">
-              <div className="py-2 text-center">Dashboard</div>
-            </Link>
-            <div className="py-2 text-center">Analytics</div>
-            <div className="py-2 text-center">Collaborate</div>
-            <div className="py-2 text-center">Plans</div>
-            {/* <div className="flex py-8 justify-center">
-              <CreateNft back={"#FFFF0A"} color={"#000000"} />
+            {/* <div>
+              <Link to="/dashboard">
+                <div className="py-2 text-center">Dashboard</div>
+              </Link>
+              <div className="py-2 text-center">Analytics</div>
+              <div className="py-2 text-center">Collaborate</div>
+              <div className="py-2 text-center">Plans</div>
             </div> */}
+
             <div
               className="mt-14"
               style={{ display: logStatus === "true" ? "none" : "block" }}
@@ -318,14 +308,28 @@ function Nav() {
                 </Link>
               </div>
               <div>
-                <div className="flex justify-center my-4">
-                  <Link to="/profile">
-                    <img className="w-14" src="/user.png" alt="" />
-                  </Link>
+                <div className="flex justify-center my-8 px-1">
+                  <div className="w-2/6">
+                    <Link to="/profile">
+                      <img className="w-14" src="/user.png" alt="" />
+                    </Link>
+                  </div>
+                  <div className="w-4/6">
+                    <h4 className="font-extrabold pl-2">John Doe</h4>
+                    <p className="text-sm pl-2">@johndoe</p>
+                    <div className="userprice text-center mt-4 text-sm w-10/12 px-1 py-1">
+                      $$: <span className="font-extrabold">Rs 200</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="userprice text-center mt-4 w-4/5 mx-auto bg-gray-200 text-sm">
-                  $$: Rs 200
-                </div>
+                
+              </div>
+              <div className="pl-4">
+                <div className="my-4" style={{fontSize: "16px"}}>Profile</div>
+                <div className="my-4" style={{fontSize: "16px"}}>Wallet</div>
+                <div className="my-4" style={{fontSize: "16px"}}>Become a creator</div>
+                <div className="my-4" style={{fontSize: "16px"}}>Your Bids</div>
+                <div className="my-4 font-extrabold" style={{fontSize: "16px"}}>Logout</div>
               </div>
               <div className="flex justify-center items-center md:mt-4">
                 <i
@@ -344,6 +348,10 @@ function Nav() {
           </div>
         </div>
       </div>
+
+
+
+
       <div
         className="mx-auto w-10/12 py-2 lg:hidden"
         style={{ borderBottom: "1px solid #C2C2C2" }}

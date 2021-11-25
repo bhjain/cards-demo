@@ -33,14 +33,14 @@ function Card({props}) {
                         <img src={props.owner.ownerimg} alt="" style={{width: "31px", height: "31px"}} />
                         <div>
                             <h4 className="font-bold text-sm">OWNER</h4>
-                            <p className="text-sm" style={{position: "relative", left: "16px", fontSize: "11px"}}>@ {props.owner.name}</p>
+                            <p className="text-sm ml-4" style={{left: "16px", fontSize: "11px"}}>@ {props.owner.name}</p>
                         </div>
                     </div>
                     <div className="Creator flex items-center mt-4 mx-2 gap-3 sm:justify-center">
                         <img src={props.creator.creatorimg} alt="" style={{width: "31px", height: "31px"}} />
                         <div>
                             <h4 className="font-bold text-sm">CREATOR</h4>
-                            <p className="text-sm" style={{position: "relative", left: "16px", fontSize: "11px"}}>@ {props.creator.name}</p>
+                            <p className="text-sm ml-4" style={{left: "16px", fontSize: "11px"}}>@ {props.creator.name}</p>
                         </div>
                     </div>
                 </div>
