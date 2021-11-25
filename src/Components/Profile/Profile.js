@@ -13,6 +13,7 @@ function Profile() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [ProfileData, setProfileData] = useState({});
+  const [collection, setcollection] = useState(true);
 
   useEffect(() => {
     const data = creator.filter((data) => data.id == id);
@@ -72,24 +73,50 @@ function Profile() {
       <div className="w-2/3 md:w-full px-20 lg:px-4 sm:w-full">
         <div className="flex justify-center md:w-full">
           <div
-            className="prof_btn flex w-2/4 py-4 sm:py-2 justify-center items-center px-2 sm:w-full"
+            className=" flex w-2/4 justify-center items-center sm:w-full"
             style={{ backgroundColor: "#C2C2C2", borderRadius: "30px" }}
           >
             <div
               className="w-full text-center"
-              style={{ borderRight: "1px solid #000000" }}
+              // style={{ borderRight: "1px solid #000000" }}
+              style={{
+                backgroundColor: collection ? "black" : "#C2C2C2",
+                borderRadius: "30px",
+                color: collection ? "white" : "black",
+              }}
             >
-              <button style={{ fontSize: "18px" }}>Collection</button>
+              <button
+                style={{ fontSize: "18px" }}
+                onClick={() => setcollection(true)}
+              >
+                Collection
+              </button>
             </div>
-            <div className="w-full text-center">
-              <button style={{ fontSize: "18px" }}>Creations</button>
+            <div
+              className="w-full text-center"
+              style={{
+                backgroundColor: collection ? "#C2C2C2" : "black",
+                borderRadius: "30px",
+                color: collection ? "black" : "white",
+              }}
+            >
+              <button
+                style={{ fontSize: "18px" }}
+                onClick={() => setcollection(false)}
+              >
+                Creations
+              </button>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-24 my-8 mx-8 md:gap-10 md:mx-4 lg:gap-14 lg:mx-6 sm:grid-cols-1">
-          {user_card.map((element) => (
-            <ProfileCard props={element} />
-          ))}
+          {(() => {
+            if (collection) {
+              return user_card.map((element) => (
+                <ProfileCard props={element} />
+              ));
+            }
+          })()}
         </div>
       </div>
     </div>

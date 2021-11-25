@@ -1,8 +1,13 @@
-.App{
-    background: #E5E5E5;
+.App {
+  background: #e5e5e5;
 }
 @media (max-width: 767px) {
-    .hidden-mobile {
-      display: none;
-    }
+  .hidden-mobile {
+    display: none;
   }
+}
+
+@font-face {
+  font-family: "Garet";
+  src: url("./garet-cufonfonts-webfont/style.css");
+}

@@ -224,6 +224,7 @@ function Discover() {
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"
+                    // style={{fontFamily:"Garet"}}
                     onClick={() => {
                       setShowDrop_Sort_By(!ShowDrop_Sort_By);
                       sort_price("high_to_low");

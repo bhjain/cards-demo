@@ -10,8 +10,8 @@ function CreateNew() {
   return (
     <Link to="/createnft">
       <div
-        className="create_new_card flex items-center justify-center text-center"
-        style={{ minHeight: "70vh" }}
+        // style={{ minHeight: "70vh" }}
+        className="create_new_card flex items-center justify-center text-center md:h-48 h-full"
       >
         <div>
           <h2 className="text-center text-5xl">+</h2>
@@ -34,11 +34,11 @@ const collection_card = [
 
 function CreatorSpace() {
   return (
-    <div className="w-full my-14">
+    <div className="w-full my-4">
       <div className="flex sm:flex-col">
         <div
-          className="dashboard_sidebar w-1/5 py-8 text-left pl-14 lg:pl-8 md:pl-2 md:w-2/6 sm:hidden"
-          style={{ borderRight: "1px solid #C4C4C4", maxHeight: "100vh" }}
+          className="dashboard_sidebar w-1/5 py-8 h-15 text-left pl-14 lg:pl-8  md:pl-2 md:w-2/6 sm:hidden"
+          style={{ borderRight: "1px solid #C4C4C4" }}
         >
           <div className="py-6">
             <Link to="/dashboard">Dashboard</Link>
@@ -68,12 +68,12 @@ function CreatorSpace() {
         <div className="creator_space w-3/5 sm:w-full">
           <h2 className="mx-14 text-4xl font-bold pb-8">Creators Space</h2>
           <p className="mx-14 my-4">Your Collections</p>
-          <div className="1st_card_div grid grid-cols-2 gap-24 mx-14 lg:grid-cols-1">
+          <div className="1st_card_div grid grid-cols-2 gap-24 md:gap-10 mx-14 lg:grid-cols-1">
             <CreateNew />
             {<Collection props={collection_card[0]} />}
           </div>
-          <p className="mx-14 my-14">Unatached Creation</p>
-          <div className="1st_card_div grid grid-cols-2 gap-24 mx-14 lg:grid-cols-1">
+          <p className="mx-14 my-8">Unatached Creation</p>
+          <div className="1st_card_div grid grid-cols-2 gap-24 md:gap-10  mx-14 lg:grid-cols-1">
             <Link to="/createnft">
               <CreateNew />
             </Link>

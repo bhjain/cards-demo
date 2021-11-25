@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div style={{ backgroundColor: "#E5E5E5" }}>
+    <div style={{ backgroundColor: "#FFFEFE" }}>
       <div className="footer md:hidden">
         <div
           className="mx-auto w-10/12"
@@ -21,9 +21,9 @@ function Footer() {
           </div>
           <div className="footer_center w-5/12 text-center pt-28">
             <div className="social_media_logo flex gap-4 justify-center">
-              <img src="facebook_logo.png" alt="facebook" />
-              <img src="insta_logo.png" alt="instagram" />
-              <img src="tweet_logo.png" alt="tweeter" />
+              <img src="/facebook_logo.png" alt="facebook" />
+              <img src="/insta_logo.png" alt="instagram" />
+              <img src="/tweet_logo.png" alt="tweeter" />
             </div>
             <p className="pt-4" style={{ fontSize: "11px" }}>
               2021. Immutly. All Rights Reserved.
@@ -103,9 +103,9 @@ function Footer() {
           }
         >
           <div className="social_media_logo flex gap-4 justify-center">
-            <img src="facebook_logo.png" alt="facebook" />
-            <img src="insta_logo.png" alt="instagram" />
-            <img src="tweet_logo.png" alt="tweeter" />
+            <img src="/facebook_logo.png" alt="facebook" />
+            <img src="/insta_logo.png" alt="instagram" />
+            <img src="/tweet_logo.png" alt="tweeter" />
           </div>
         </div>
         <div className="footer_right w-5/5  text-center">
@@ -131,7 +131,7 @@ function Footer() {
 
           {/* ------------------ */}
           <h4 style={{ fontWeight: "900", fontSize: "18px" }}>Company</h4>
-          <div className="text-center w-full flex justify-around space-x-1 flex-wrap">
+          <div className="text-center w-full flex justify-center px-1 space-x-1 flex-wrap">
             <p>
               <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
                 Privacy Policy

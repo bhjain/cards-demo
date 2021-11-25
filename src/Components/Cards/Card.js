@@ -17,7 +17,7 @@ function Card({props}) {
     return (
         <div className="singleCard">
             <div className="cardimg">
-                <img className="w-full" style={{margin: "0"}} src={props.img} alt="" />
+                <img className="w-full" style={{margin: "0",objectFit:"contain"}} src={props.img} alt="" />
             </div>
             <div className="cardheading text-center font-bold text-2xl my-6">
                 {props.heading}

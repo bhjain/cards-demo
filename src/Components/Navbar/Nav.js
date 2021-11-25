@@ -38,7 +38,7 @@ function Nav() {
         top: 0,
         zIndex: 100,
         overflow: "none",
-        backgroundColor: "#E5E5E5",
+        backgroundColor: "#FFFEFE",
       }}
     >
       {/* Large screen view */}
@@ -108,11 +108,11 @@ function Nav() {
                 place={"/creatorspace"}
               />
             </div>
-            <div className="w-2/3 mx-auto">
-              <div onClick={() => setDropDown(!dropdown)}>
+            <div className="w-2/3 mx-auto mt-3 " style={{display:"flex",alignItems: "center",flexDirection:"column"}}>
+              <div  onClick={() => setDropDown(!dropdown)}>
                 {(() => {
                   if (checkLoggedIn) {
-                    return <img className="mx-auto" src="/user.png" alt="" />;
+                    return <img className="mx-auto" src="/user.png" alt="" style={{width:"55px",height:"55px"}}/>;
                   } else {
                     return (
                       <div>
@@ -142,7 +142,7 @@ function Nav() {
                 })()}
                 {/* <img className="mx-auto" src="user.png" alt="" /> */}
               </div>
-              <div className="userprice text-center mt-4 text-sm">
+              <div className="userprice text-center mt-1 text-sm">
                 $$: Rs 200
               </div>
               <div
@@ -188,16 +188,16 @@ function Nav() {
               </div>
             </div>
             <div
-              className="creator px-4 py-4 text-center md:px-1"
-              style={{ fontSize: "4vw" }}
-            >
-              <Link to="/creator">Creator</Link>
-            </div>
-            <div
               className="discover px-4 py-4 text-center md:px-1"
               style={{ fontSize: "4vw", fontFamily: "grat" }}
             >
               <Link to="discover">Discover</Link>
+            </div>
+            <div
+              className="creator px-4 py-4 text-center md:px-1"
+              style={{ fontSize: "4vw" }}
+            >
+              <Link to="/creator">Creator</Link>
             </div>
           </div>
           {/* <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}> */}

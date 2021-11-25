@@ -1,28 +1,28 @@
-.hist_div{
-    border: 1px solid rgba(255, 245, 0, 0.1);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
+.hist_div {
+  border: 1px solid rgba(255, 245, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
 }
 
-.img_input{
-    border: 1px solid #C2C2C2;
-    box-sizing: border-box;
-    border-radius: 20px;
+.img_input {
+  border: 1px solid #c2c2c2;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-.data textarea{
-    border: 1px solid #C2C2C2;
-    box-sizing: border-box;
-    border-radius: 20px;
+.data textarea {
+  border: 1px solid #c2c2c2;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-textarea:focus{
-    outline: none;
+textarea:focus {
+  outline: none;
 }
 
-.price_btn{
-    border: 0.5px solid #C2C2C2;
-    box-sizing: border-box;
-    border-radius: 100px;
+.price_btn {
+  border: 0.5px solid #c2c2c2;
+  box-sizing: border-box;
+  border-radius: 100px;
 }

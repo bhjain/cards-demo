@@ -7,10 +7,12 @@ export const Discover_Data = [
     owner: {
       ownerimg: "owner.png",
       name: "John Doe1",
+      userName: "@john Doe",
     },
     creator: {
       creatorimg: "owner.png",
       name: "John Doe1",
+      userName: "@john Doe",
     },
   },
   {
@@ -21,10 +23,12 @@ export const Discover_Data = [
     owner: {
       ownerimg: "owner.png",
       name: "John Doe2",
+      userName: "@john Doe",
     },
     creator: {
       creatorimg: "owner.png",
       name: "John Doe2",
+      userName: "@john Doe",
     },
   },
   {
@@ -35,10 +39,12 @@ export const Discover_Data = [
     owner: {
       ownerimg: "owner.png",
       name: "John Doe3",
+      userName: "@john Doe",
     },
     creator: {
       creatorimg: "owner.png",
       name: "John Doe3",
+      userName: "@john Doe",
     },
   },
   {
@@ -49,24 +55,29 @@ export const Discover_Data = [
     owner: {
       ownerimg: "owner.png",
       name: "John Doe",
+      userName: "@john Doe",
     },
     creator: {
       creatorimg: "owner.png",
       name: "John Doe",
+      userName: "@john Doe",
     },
   },
   {
     id: 5,
     img: "card1.png",
     heading: "Abstract Art",
+
     price: 200,
     owner: {
       ownerimg: "owner.png",
       name: "John Doe",
+      userName: "@john Doe",
     },
     creator: {
       creatorimg: "owner.png",
       name: "John Doe",
+      userName: "@john Doe",
     },
   },
   {
@@ -77,10 +88,12 @@ export const Discover_Data = [
     owner: {
       ownerimg: "owner.png",
       name: "John Doe",
+      userName: "@john Doe",
     },
     creator: {
       creatorimg: "owner.png",
       name: "John Doe",
+      userName: "@john Doe",
     },
   },
   {
@@ -90,11 +103,14 @@ export const Discover_Data = [
     price: 600,
     owner: {
       ownerimg: "owner.png",
+      userName: "@john Doe",
+
       name: "John Doe",
     },
     creator: {
       creatorimg: "owner.png",
       name: "John Doe",
+      userName: "@john Doe",
     },
   },
 ];

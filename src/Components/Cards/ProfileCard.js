@@ -1,16 +1,13 @@
-import React from "react";
+import React,{useState} from "react"
 
 function ProfileCard({ props }) {
-
-
-
   return (
     <div className="singleCard">
       <div className="cardimg">
         <img
           className="w-full"
           style={{ margin: "0" }}
-          src={props.img}
+          src={`/${props.img}`}
           alt=""
         />
       </div>

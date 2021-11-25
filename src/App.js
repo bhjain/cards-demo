@@ -21,6 +21,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import CreatorSpace from "./Components/Creator/CreatorSpace";
 // import Bid from "./Components/YourBides/Bid";
 import BidPage from "./Components/YourBides/BidPage";
+// import "./garet-cufonfonts-webfont/style.css";
 
 function App() {
   return (
