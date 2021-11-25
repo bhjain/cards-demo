@@ -247,7 +247,7 @@ function Discover() {
                       recent();
                     }}
                   >
-                    Recent Product
+                    Recently Added
                   </div>
                   <div
                     className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-black hover:text-white"
@@ -260,7 +260,7 @@ function Discover() {
                       setsort_value("Low-High");
                     }}
                   >
-                    Price (low-high)
+                    Price: Low to High
                   </div>
                   <div
                     className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-black hover:text-white"
@@ -274,7 +274,47 @@ function Discover() {
                       setsort_value("High-Low");
                     }}
                   >
-                    Price (high - low)
+                    Price: High to Low
+                  </div>
+                  <div
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                  >
+                    Most Viewed
+                  </div>
+                  <div
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                  >
+                    Recently Sold
+                  </div>
+                  <div
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                  >
+                    Ending Soon
+                  </div>
+                  <div
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                  >
+                    Oldest
+                  </div>
+                  <div
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                  >
+                    Highest Last Sale
                   </div>
                   <div
                     style={{
