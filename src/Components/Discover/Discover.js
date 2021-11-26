@@ -88,10 +88,10 @@ function Discover() {
                     </svg>
                   </button>
                 </div>
-
+                
                 <div
                   style={{ display: ShowDrop ? "block" : "none", color: "#000000", width: "50vw"}}
-                  className="origin-top-right absolute left-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
+                  className="filter_model origin-top-right absolute left-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
@@ -266,7 +266,7 @@ function Discover() {
                   border:"1px solid white"
                 }}
                 // className="origin-top-right mt-3 absolute right-0 w-56 rounded-md shadow-lg bg-black text-white ring-1 ring-black ring-opacity-5 focus:ring-2"
-                className="origin-top-right absolute mt-3 py-2 bg-white shadow-2xl rounded-md  ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto sm:right-2"
+                className="filter_model origin-top-right absolute mt-3 py-2 bg-white shadow-2xl rounded-md  ring-1 ring-black ring-opacity-5 focus:outline-none mx-auto sm:right-2"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"

@@ -17,6 +17,7 @@ function Nav() {
   const [dropdown, setDropDown] = useState(false);
   const [logStatus, setLogStatus] = useState();
   const [search_Data, setSearch_Data] = useState("");
+  const[scroll, setScroll] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   useEffect(() => {
@@ -24,11 +25,16 @@ function Nav() {
   }, []);
   // const loginStatus = useSelector(state => state.LOGGED_IN_USER)
   const checkLoggedIn = useSelector((state) => state.LOGGED_IN_USER);
-  // const checkLoggedIn = localStorage.getItem("login");
+  // const checkLoggedIn = false;
 
   // console.log(logStatus);
   // setTimeout(function() { your_func(); }, 5000);
 
+  function measureScroll(){
+    setScroll(window.scrollY);
+    console.log(scroll);
+  }
+  window.addEventListener("scroll", measureScroll);
   return (
     // Navbar
     <div
@@ -39,6 +45,7 @@ function Nav() {
         zIndex: 100,
         overflow: "none",
         backgroundColor: "#FFFEFE",
+        fontFamily: "'Garet', sans-serif"
       }}
     >
       {/* Large screen view */}
@@ -249,13 +256,25 @@ function Nav() {
             >
               <img src="/search.png" alt="" />
             </div>
-            <i
+            {/* <i
               className="fas fa-bars"
               style={{ fontSize: "20px" }}
               onClick={() => {
                 setSideNav(!sidNav);
               }}
-            ></i>
+            ></i> */}
+            <div>
+              <img className="w-9" src="/user.png" alt="" onClick={() => {
+                  setSideNav(!sidNav);
+                }} 
+                style={{ display: logStatus === "true" ? "block" : "none" }}
+              />
+              <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" className="w-9" alt=""  onClick={() => {
+                  setSideNav(!sidNav);
+                }} 
+                style={{ display: logStatus === "true" ? "none" : "block" }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -294,6 +313,7 @@ function Nav() {
               className="mt-14"
               style={{ display: logStatus === "true" ? "none" : "block" }}
             >
+              <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" className="w-20 mx-auto" alt="" />
               <div className="flex justify-center">
                 <Login back={"#000000"} color={"#FFF"} />
               </div>
@@ -317,15 +337,15 @@ function Nav() {
                     <h4 className="font-extrabold pl-2">John Doe</h4>
                     <p className="text-sm pl-2">@johndoe</p>
                     {/* <div className= "userprice flex justify-center mt-4 text-sm w-full text-start  pl-1 pr-1 py-1"> */}
-                    <div className= " flex justify-start mt-4 text-sm w-full text-start  pl-1 pr-1 py-1">
-                      $$: <span className="font-extrabold" style={{fontSize:"0.8rem"}}>Rs 2000</span>
-                    </div>
                   </div>
+                </div>
+                <div className= "flex justify-center mt-4 text-sm w-full text-start pl-1 pr-1 py-1">
+                  $$: <span className="font-extrabold" style={{fontSize:"0.8rem"}}>Rs 2000</span>
                 </div>
                 
               </div>
               <div className="pl-4">
-                <div className="my-5" style={{fontSize: "15px"}}>Profile |</div>
+                <div className="my-5" style={{fontSize: "15px"}}>Profile</div>
                 <div className="my-5" style={{fontSize: "15px"}}>Wallet</div>
                 <div className="my-5" style={{fontSize: "15px"}}>Become a creator</div>
                 <div className="my-5" style={{fontSize: "15px"}}>Your Bids</div>
@@ -360,7 +380,7 @@ function Nav() {
 
       <div
         className="mx-auto w-10/12 py-2 lg:hidden"
-        style={{ borderBottom: "1px solid #C2C2C2" }}
+        style={{ borderBottom: "1px solid #C2C2C2", display: scroll >= 80 ? "none" : "block"}}
       ></div>
       <div className="hidden lg:block">
         <div

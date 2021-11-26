@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div style={{ backgroundColor: "#FFFEFE" }}>
+    <div style={{ backgroundColor: "#fffefe", fontFamily: "Garet"}}>
       <div className="footer md:hidden">
         <div
           className="mx-auto w-10/12"
@@ -12,7 +12,7 @@ function Footer() {
         <div className="px-8 flex justify-between items-center py-2">
           <div className="footer_left w-3/12">
             <img className="z-1" src="nft-logo.png" alt="" />
-            <p className="pl-4 " style={{ fontSize: "14px" }}>
+            <p className="pl-4 " style={{ fontSize: "14px", fontFamily: '"Garet", sans-serif'}}>
               Yes, so please your Majesty. I did go between them, as I said; but
               more than that, he loved her-for indeed he was mad for her, and
               talk'd of Satan, and of Limbo, and of Furies, and I know not what.
@@ -30,7 +30,7 @@ function Footer() {
             </p>
           </div>
           <div className="footer_right w-4/12 flex justify-between">
-            <div className="flex-col">
+            <div className="test_footer flex-col">
               <h4 style={{ fontWeight: "900", fontSize: "18px" }}>
                 Marketplace
               </h4>
@@ -79,7 +79,7 @@ function Footer() {
 
       <div
         className="footer_small_screen my-15 hidden md:block"
-        style={{ backgroundColor: "#E5E5E5" }}
+        style={{ backgroundColor: "#fffefe" }}
       >
         <div
           className="footer_left mx-auto w-4/5"

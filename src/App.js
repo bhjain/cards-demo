@@ -24,6 +24,7 @@ import BidPage from "./Components/YourBides/BidPage";
 // import "./garet-cufonfonts-webfont/style.css";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Nav />

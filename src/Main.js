@@ -10,7 +10,7 @@ function Main() {
       {/* <LoginForm /> */}
       <div
         className="flex justify-center items-center "
-        style={{ minHeight: "70vh", fontSize: "2rem" }}
+        style={{ minHeight: "70vh", fontSize: "2rem", fontFamily: "'Garet', sans-serif"}}
       >
         Home Screen
       </div>
