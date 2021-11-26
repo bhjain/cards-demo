@@ -151,6 +151,44 @@ function Discover() {
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Price <span className="text-sm font-extrabold">(In INR)</span></h2>
                       <div className="gap-4">
+                         {/* <div className="px-4 bg-black text-center "> */}
+                    {/* <List
+                    className="drop_option "
+                    style={{ backgroundColor: "black !important" }}
+                  > */}
+                    {/* {volume}
+                    <ListItem
+                   
+                      innerClassName="flex space-x-4"
+                      innerChildren={
+                        // <div className="flex-column">
+                        <>
+                          <span className="text-black text-sm font-bold drop_option">
+                            0
+                          </span>
+                          <Range
+                            colors={{
+                              valueBg: "bg-white",
+                              thumbBgMaterial: "range-thumb:bg-primary",
+                            }}
+                            value={volume}
+                            max={1000}
+                            step={10}
+                            onChange={(e) => {
+                              setVolume(e.target.value);
+                              filter_by_price(e.target.value);
+                            }}
+                          />
+                          <span className="text-black text-sm font-bold drop_option">
+                            1000
+                          </span>
+                        </>
+
+                        // </div>
+                      }
+                    /> */}
+                    {/* </List> */}
+                  {/* </div> */}
                         <button className="filter_btn py-1 px-6 my-2 mx-2">Min</button>
                         <button className="filter_btn py-1 px-6 my-2 mx-2">Max</button>
                         <button className="filter_btn py-1 px-6 my-2 mx-2">Apply</button>
@@ -277,7 +315,7 @@ function Discover() {
                     Price: High to Low
                   </div>
                   <div
-                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm hover:bg-black hover:text-white "
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"
@@ -285,7 +323,7 @@ function Discover() {
                     Most Viewed
                   </div>
                   <div
-                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm hover:bg-black hover:text-white "
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"
@@ -293,7 +331,7 @@ function Discover() {
                     Recently Sold
                   </div>
                   <div
-                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm hover:bg-black hover:text-white "
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"
@@ -301,7 +339,7 @@ function Discover() {
                     Ending Soon
                   </div>
                   <div
-                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm hover:bg-black hover:text-white "
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"
@@ -309,7 +347,7 @@ function Discover() {
                     Oldest
                   </div>
                   <div
-                    className="drop_option text-gray-700 block px-4 py-2 text-sm  hover:bg-gray-500"
+                    className="drop_option text-gray-700 block px-4 py-2 text-sm hover:bg-black hover:text-white "
                     role="menuitem"
                     tabindex="-1"
                     id="menu-item-1"

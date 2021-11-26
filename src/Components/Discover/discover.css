@@ -6,13 +6,18 @@
 }
 .drop_option {
   background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(165, 165, 165);
+  /* border-bottom: 1px solid rgb(165, 165, 165); */
   color: rgb(34, 34, 34);
 }
 
-.filter_btn{
-  background: #F3F3F3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.filter_btn {
+  background: #f3f3f3;
+  box-shadow: 2px 2px rgba(0, 0, 0, 1);
   border-radius: 20px;
   color: #000000;
+}
+.give-shadow {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
 }

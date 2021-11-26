@@ -70,7 +70,10 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div className="w-2/3 md:w-full px-20 lg:px-4 sm:w-full">
+      <div
+        className="w-2/3 md:w-full px-20 lg:px-4 sm:w-full"
+        style={{ paddingTop: "-20px" }}
+      >
         <div className="flex justify-center md:w-full">
           <div
             className=" flex w-2/4 justify-center items-center sm:w-full"
@@ -86,7 +89,7 @@ function Profile() {
               }}
             >
               <button
-                style={{ fontSize: "18px" }}
+                style={{ fontSize: "18px", padding: "5px" }}
                 onClick={() => setcollection(true)}
               >
                 Collection
@@ -101,7 +104,7 @@ function Profile() {
               }}
             >
               <button
-                style={{ fontSize: "18px" }}
+                style={{ fontSize: "18px", padding: "5px" }}
                 onClick={() => setcollection(false)}
               >
                 Creations
@@ -111,7 +114,7 @@ function Profile() {
         </div>
         <div className="grid grid-cols-2 gap-24 my-8 mx-8 md:gap-10 md:mx-4 lg:gap-14 lg:mx-6 sm:grid-cols-1">
           {(() => {
-            if (collection) {
+            if (!collection) {
               return user_card.map((element) => (
                 <ProfileCard props={element} />
               ));

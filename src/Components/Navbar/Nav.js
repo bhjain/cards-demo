@@ -142,9 +142,9 @@ function Nav() {
                 })()}
                 {/* <img className="mx-auto" src="user.png" alt="" /> */}
               </div>
-              <div className="userprice text-center mt-1 text-sm">
+              {/* <div className="userprice text-center mt-1 text-sm">
                 $$: Rs 200
-              </div>
+              </div> */}
               <div
                 className="absolute bg-white top-24 right-0"
                 style={{ display: dropdown ? "block" : "none" }}
@@ -155,6 +155,9 @@ function Nav() {
                 <div className="list_1 py-2 text-center">Analytics</div>
                 <div className="list_1 py-2 text-center">Collaborate</div>
                 <div className="list_1 py-2 text-center">Plans</div>
+                <div className="userprice text-center mt-1 text-sm">
+                $$: Rs 200
+              </div>
                 <div
                   className="list_1 py-2 text-center"
                   onClick={() => {
@@ -271,7 +274,7 @@ function Nav() {
         >
           <div className="w-3/5"></div>
           <div
-            className="semiSide w-2/5 bg-white"
+            className="semiSide w-3/5 bg-white"
             style={{ minHeight: "100vh" }}
           >
             <div className="logo flex justify-between px-4 items-center">
@@ -299,14 +302,10 @@ function Nav() {
               </div>
             </div>
             <div
-              className="mt-8 items-center gap-8 mx-auto relative"
+              className="mt-8 items-center gap-8  relative pr-1"
               style={{ display: logStatus === "true" ? "block" : "none" }}
             >
-              <div className="flex justify-center">
-                <Link to="/creatorspace">
-                  <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
-                </Link>
-              </div>
+             
               <div>
                 <div className="flex justify-center my-8 px-1">
                   <div className="w-2/6">
@@ -314,24 +313,31 @@ function Nav() {
                       <img className="w-14" src="/user.png" alt="" />
                     </Link>
                   </div>
-                  <div className="w-4/6">
+                  <div className="w-4/6 ">
                     <h4 className="font-extrabold pl-2">John Doe</h4>
                     <p className="text-sm pl-2">@johndoe</p>
-                    <div className="userprice text-center mt-4 text-sm w-10/12 px-1 py-1">
-                      $$: <span className="font-extrabold">Rs 200</span>
+                    {/* <div className= "userprice flex justify-center mt-4 text-sm w-full text-start  pl-1 pr-1 py-1"> */}
+                    <div className= " flex justify-start mt-4 text-sm w-full text-start  pl-1 pr-1 py-1">
+                      $$: <span className="font-extrabold" style={{fontSize:"0.8rem"}}>Rs 2000</span>
                     </div>
                   </div>
                 </div>
                 
               </div>
               <div className="pl-4">
-                <div className="my-4" style={{fontSize: "16px"}}>Profile</div>
-                <div className="my-4" style={{fontSize: "16px"}}>Wallet</div>
-                <div className="my-4" style={{fontSize: "16px"}}>Become a creator</div>
-                <div className="my-4" style={{fontSize: "16px"}}>Your Bids</div>
-                <div className="my-4 font-extrabold" style={{fontSize: "16px"}}>Logout</div>
+                <div className="my-5" style={{fontSize: "15px"}}>Profile |</div>
+                <div className="my-5" style={{fontSize: "15px"}}>Wallet</div>
+                <div className="my-5" style={{fontSize: "15px"}}>Become a creator</div>
+                <div className="my-5" style={{fontSize: "15px"}}>Your Bids</div>
+             
+                <div className="my-4 font-extrabold" style={{fontSize: "15px"}}>Logout</div>
+                <div className="flex justify-center">
+                <Link to="/creatorspace" style={{marginTop:"10px"}}>
+                  <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
+                </Link>
               </div>
-              <div className="flex justify-center items-center md:mt-4">
+              </div>
+              {/* <div className="flex justify-center items-center md:mt-4">
                 <i
                   className="fas fa-times text-center"
                   style={{
@@ -343,7 +349,7 @@ function Nav() {
                   }}
                   onClick={() => setSideNav(!sidNav)}
                 ></i>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

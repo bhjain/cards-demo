@@ -42,7 +42,7 @@ function Dashboard() {
     <div className="w-full">
       <div className="w-11/12 my-8 flex lg:w-full sm:block">
         <div
-          className="dashboard_sidebar w-1/5 py-8 text-left pl-14 lg:pl-8 md:pl-2 md:w-2/6 sm:hidden"
+          className="dashboard_sidebar w-1/5 py-8 text-left pl-14  lg:pl-8 md:pl-2 md:w-2/6 sm:hidden"
           style={{ borderRight: "1px solid #C4C4C4", maxHeight: "100vh" }}
         >
           <div className="py-4">Dashboard</div>
