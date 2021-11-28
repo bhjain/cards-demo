@@ -102,12 +102,27 @@
 }
 
 .semiSide {
-  left: 0;
+  right: 0;
   position: absolute;
   animation: sliding 1s;
 }
 
-@keyframes sliding {
+@keyframes sliding{
+  from {
+    right: -200px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+.semiSide_left{
+  left: 0;
+  position: absolute;
+  animation: sliding_left 1s;
+}
+
+@keyframes sliding_left{
   from {
     left: -200px;
   }

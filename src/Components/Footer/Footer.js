@@ -137,16 +137,19 @@ function Footer() {
                 Privacy Policy
               </Link>
             </p>
+            <span className="px-1">.</span>
             <p>
               <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
                 Terms & Conditions
               </Link>
             </p>
+            <span className="px-1">.</span>
             <p>
               <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
                 Community Guidelines
               </Link>
             </p>
+            <span className="px-1">.</span>
             <p>
               <Link to="/" style={{ fontWeight: "400", fontSize: "14px" }}>
                 Help

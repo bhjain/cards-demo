@@ -12,6 +12,7 @@ import { LOGGED_IN_USER } from "../../Redux/ACTION";
 
 function Nav() {
   const [sidNav, setSideNav] = useState(false);
+  const [sidNav_left, setSideNav_left] = useState(false);
   const [search, setSearch] = useState(false);
   const [smallSearch, setSmallSearch] = useState(false);
   const [dropdown, setDropDown] = useState(false);
@@ -66,7 +67,7 @@ function Nav() {
 
         <div className="navRight w-8/12 flex items-center justify-end">
           <div
-            className="p-3 mr-8 roundSearch"
+            className="p-3 mr-6 roundSearch"
             style={{ borderRadius: "50%", display: search ? "none" : "block" }}
             onClick={() => {
               setSearch(true);
@@ -104,6 +105,9 @@ function Nav() {
               <Register />
             </Link>
           </div>
+          <div className="pr-6">
+              <i className="fas fa-bell text-xl" style={{color: "gray"}}></i>
+            </div>
           <div
             className="user_prof items-center gap-8 flex justify-between mr-4"
             style={{ display: checkLoggedIn ? "flex" : "none" }}
@@ -190,25 +194,20 @@ function Nav() {
             // style={{ display: smallSearch ? "none" : "flex" }}
             style={{ display: smallSearch ? "none" : "flex" }}
           >
-            <div className="small-left">
+            <div className="small-left flex items-center ml-2">
+              <i class="fas fa-bars"
+                onClick={() => setSideNav_left(!sidNav_left)}
+              ></i>
               <div className="logo">
                 <Link to="/">
                   <img className="w-40 sm:w-32" src="/nft-logo.png" alt="" />
                 </Link>
               </div>
             </div>
-            <div
-              className="discover px-4 py-4 text-center md:px-1"
-              style={{ fontSize: "4vw", fontFamily: "grat" }}
-            >
-              <Link to="discover">Discover</Link>
-            </div>
-            <div
-              className="creator px-4 py-4 text-center md:px-1"
-              style={{ fontSize: "4vw" }}
-            >
-              <Link to="/creator">Creator</Link>
-            </div>
+
+
+            
+
           </div>
           {/* <div className="small-mid w-full justify-between items-center top-0 py-4 px-4 flex" style={{display: smallSearch ? "flex" : "none"}}> */}
           {/*  Big Search Bar for mobile screen */}
@@ -240,7 +239,7 @@ function Nav() {
           </div>
           {/* >>>>>>>>>>>>>>>>>>>>> */}
           <div
-            className="small-right flex justify-end items-center h-full py-4 pr-2"
+            className="small-right flex justify-end items-center h-full py-2 pr-2"
             style={{ display: smallSearch ? "none" : "flex" }}
           >
             <div
@@ -263,6 +262,10 @@ function Nav() {
                 setSideNav(!sidNav);
               }}
             ></i> */}
+            <div className="pl-1 pr-4">
+              <i className="fas fa-bell text-lg" style={{color: "gray"}}></i>
+            </div>
+
             <div>
               <img className="w-9" src="/user.png" alt="" onClick={() => {
                   setSideNav(!sidNav);
@@ -279,7 +282,68 @@ function Nav() {
         </div>
       </div>
 
-      {/* Sidebar view */}
+
+      {/* sidebar for left view */}
+      <div className="hidden lg:block relative" style={{ zIndex: "999" }}>
+        <div
+          className="sidbar fixed"
+          style={{
+            display: sidNav_left ? "block" : "none",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            minWidth: "100vw",
+            minHeight: "100vh",
+            top: "0",
+          }}
+        >
+          <div className="w-3/5"></div>
+          <div
+            className="semiSide_left w-3/5 bg-white"
+            style={{ minHeight: "100vh" }}
+          >
+            <div className="logo flex justify-between px-4 items-center">
+              <img className="w-5/5" src="/nft-logo.png" alt="" />
+
+            </div>
+            {/* <div>
+              <Link to="/dashboard">
+                <div className="py-2 text-center">Dashboard</div>
+              </Link>
+              <div className="py-2 text-center">Analytics</div>
+              <div className="py-2 text-center">Collaborate</div>
+              <div className="py-2 text-center">Plans</div>
+            </div> */}
+
+            
+              {/* <div className="flex justify-center items-center md:mt-4">
+                <i
+                  className="fas fa-times text-center"
+                  style={{
+                    fontSize: "15px",
+                    border: "1px solid grey",
+                    borderRadius: "50%",
+                    width: "18px",
+                    height: "18px",
+                  }}
+                  onClick={() => setSideNav(!sidNav)}
+                ></i>
+              </div> */}
+              <div
+              className="discover px-4 py-4 text-center md:px-1 mt-8"
+              style={{ fontSize: "6vw", fontFamily: "grat" }}
+            >
+              <Link to="discover">Discover</Link>
+            </div>
+            <div
+              className="creator px-4 py-4 text-center md:px-1"
+              style={{ fontSize: "6vw" }}
+            >
+              <Link to="/creator">Creator</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Sidebar for right view */}
       <div className="hidden lg:block relative" style={{ zIndex: "999" }}>
         <div
           className="sidbar fixed"
@@ -351,12 +415,12 @@ function Nav() {
                 <div className="my-5" style={{fontSize: "15px"}}>Your Bids</div>
              
                 <div className="my-4 font-extrabold" style={{fontSize: "15px"}}>Logout</div>
+              </div>
                 <div className="flex justify-center">
-                <Link to="/creatorspace" style={{marginTop:"10px"}}>
-                  <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
-                </Link>
-              </div>
-              </div>
+                  <Link to="/creatorspace" style={{marginTop:"10px"}}>
+                    <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
+                  </Link>
+                </div>
               {/* <div className="flex justify-center items-center md:mt-4">
                 <i
                   className="fas fa-times text-center"
@@ -377,12 +441,13 @@ function Nav() {
 
 
 
-
-      <div
-        className="mx-auto w-10/12 py-2 lg:hidden"
-        style={{ borderBottom: "1px solid #C2C2C2", display: scroll >= 80 ? "none" : "block"}}
-      ></div>
-      <div className="hidden lg:block">
+      <div className="lg:hidden">
+        <div
+          className="a mx-auto w-10/12 py-2 lg:hidden"
+          style={{ borderBottom: "1px solid #C2C2C2", display: scroll >= 80 ? "none" : "block"}}
+        ></div>
+      </div>
+      <div className="b hidden lg:block">
         <div
           className="mx-auto w-10/12 py-2 md:py-1 hidden lg:block"
           style={{
