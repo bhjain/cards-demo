@@ -157,10 +157,10 @@ function Nav() {
                 $$: Rs 200
               </div> */}
               <div
-                className="absolute bg-white top-24 right-0"
-                style={{ display: dropdown ? "block" : "none" }}
+                className="absolute bg-white top-24 right-0 shadow-md px-4"
+                style={{ display: dropdown ? "block" : "none"}}
               >
-                <Link to="/dashboard">
+                {/* <Link to="/dashboard">
                   <div className="list_1 py-2 text-center px-8">Dashboard</div>
                 </Link>
                 <div className="list_1 py-2 text-center">Analytics</div>
@@ -178,6 +178,32 @@ function Nav() {
                   }}
                 >
                   Logout
+                </div> */}
+                <div>
+                  <div className="flex justify-center my-8 px-1">
+                    <div className="w-2/6">
+                      <Link to="/profile">
+                        <img className="w-14" src="/user.png" alt="" />
+                      </Link>
+                    </div>
+                    <div className="w-4/6 ">
+                      <h4 className="font-extrabold pl-2">John Doe</h4>
+                      <p className="text-sm pl-2">@johndoe</p>
+                      <div className= "flex justify-center mt-4 text-sm w-full text-start pl-1 pr-1 py-1" style={{ border: "0.3px solid #000000", boxSizing: "border-box", borderRadius: "50px"}}>
+                        $$: <span className="font-extrabold" style={{fontSize:"0.8rem"}}>Rs 2000</span>
+                      </div>
+                      {/* <div className= "userprice flex justify-center mt-4 text-sm w-full text-start  pl-1 pr-1 py-1"> */}
+                    </div>
+                  </div>
+                  
+                </div>
+                <div className="pl-4">
+                  <div className="my-5" style={{fontSize: "15px"}}>Profile</div>
+                  <div className="my-5" style={{fontSize: "15px"}}>Wallet</div>
+                  <div className="my-5" style={{fontSize: "15px"}}>Become a creator</div>
+                  <div className="my-5" style={{fontSize: "15px"}}>Your Bids</div>
+              
+                  <div className="my-4 font-extrabold" style={{fontSize: "15px"}}>Logout</div>
                 </div>
               </div>
             </div>
