@@ -6,9 +6,9 @@ import {
   // NavbarBackLink,
   // BlockTitle,
   // BlockHeader,
-  List,
-  ListItem,
-  Range,
+  // List,
+  // ListItem,
+  // Range,
 } from "tailwind-mobile/react";
 import "./discover.css";
 import { Discover_Data, high_to_low, low_to_high } from "./Discover_data";
@@ -150,48 +150,17 @@ function Discover() {
                     </div>
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Price <span className="text-sm font-extrabold">(In INR)</span></h2>
-                      <div className="gap-4">
-                         {/* <div className="px-4 bg-black text-center "> */}
-                    {/* <List
-                    className="drop_option "
-                    style={{ backgroundColor: "black !important" }}
-                  > */}
-                    {/* {volume}
-                    <ListItem
-                   
-                      innerClassName="flex space-x-4"
-                      innerChildren={
-                        // <div className="flex-column">
-                        <>
-                          <span className="text-black text-sm font-bold drop_option">
-                            0
-                          </span>
-                          <Range
-                            colors={{
-                              valueBg: "bg-white",
-                              thumbBgMaterial: "range-thumb:bg-primary",
-                            }}
-                            value={volume}
-                            max={1000}
-                            step={10}
-                            onChange={(e) => {
-                              setVolume(e.target.value);
-                              filter_by_price(e.target.value);
-                            }}
-                          />
-                          <span className="text-black text-sm font-bold drop_option">
-                            1000
-                          </span>
-                        </>
-
-                        // </div>
-                      }
-                    /> */}
-                    {/* </List> */}
-                  {/* </div> */}
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Min</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Max</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Apply</button>
+                      <div className="gap-4 text-sm">
+                        <form action="" className="flex gap-4 justify-center items-center">
+                          <input className="w-1/5 py-2 px-3" type="text" placeholder="Min" style={{border: "1px solid black", borderRadius: "20px"}} />
+                          <p className="font-bold" style={{color: "gray"}}>to</p>
+                          <input className="w-1/5 py-2 px-3" type="text" placeholder="Max" style={{border: "1px solid black", borderRadius: "20px"}} />
+                        </form>
+                        {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Min</button> */}
+                        {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Max</button> */}
+                        <div className="flex justify-center">
+                          <button className="filter_btn py-1 px-4 my-2 mx-2">Apply</button>
+                        </div>
                       </div>
                     </div>
                     <div className="my-4">
@@ -233,40 +202,47 @@ function Discover() {
                   <div className="p-4 z-888 hidden sm:block">
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Status</h2>
-                      <div className="gap-4">
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Buy Now</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">On Auction</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Sold</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Has Offers</button>
+                      <div className="gap-1 text-sm">
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Buy Now</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">On Auction</button>
+                        <button className="filter_btn py-1 px-4 my-2 mx-2">Sold</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Has Offers</button>
                       </div>
                     </div>
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Price <span className="text-sm font-extrabold">(In INR)</span></h2>
-                      <div className="gap-4">
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Min</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Max</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Apply</button>
+                      <div className="gap-4 text-sm">
+                        <form action="" className="flex gap-4">
+                          <input className="w-2/5 py-1 px-2" type="text" placeholder="Min" style={{border: "1px solid black", borderRadius: "20px"}} />
+                          <p>to</p>
+                          <input className="w-2/5 py-1 px-2" type="text" placeholder="Max" style={{border: "1px solid black", borderRadius: "20px"}} />
+                        </form>
+                        {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Min</button> */}
+                        {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Max</button> */}
+                        <div className="flex justify-center">
+                          <button className="filter_btn py-1 px-4 my-2 mx-2">Apply</button>
+                        </div>
                       </div>
                     </div>
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Market</h2>
-                      <div className="gap-4">
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Primary</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Secondary</button>
+                      <div className="gap-4 text-sm">
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Primary</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Secondary</button>
                       </div>
                     </div>
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Categories</h2>
-                      <div className="gap-4">
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Art</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Music</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Music</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Utility</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Brands</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Influencers</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Photography</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Collectables</button>
-                        <button className="filter_btn py-1 px-6 my-2 mx-2">Memes</button>
+                      <div className="gap-4 text-sm">
+                        <button className="filter_btn py-1 px-4 my-2 mx-2">Art</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Music</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Music</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Utility</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Brands</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-1">Influencers</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-1">Photography</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Collectables</button>
+                        <button className="filter_btn py-1 px-2 my-2 mx-2">Memes</button>
                       </div>
                     </div>
                   </div>

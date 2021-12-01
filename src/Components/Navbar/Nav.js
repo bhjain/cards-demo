@@ -67,7 +67,7 @@ function Nav() {
 
         <div className="navRight w-8/12 flex items-center justify-end">
           <div
-            className="p-3 mr-6 roundSearch"
+            className="p-3 roundSearch"
             style={{ borderRadius: "50%", display: search ? "none" : "block" }}
             onClick={() => {
               setSearch(true);
@@ -105,8 +105,8 @@ function Nav() {
               <Register />
             </Link>
           </div>
-          <div className="pr-6">
-              <i className="fas fa-bell text-xl" style={{color: "gray"}}></i>
+          <div className="bg-yellow-300 flex justify-center mx-6 px-4 py-2 roundSearch" style={{borderRadius: "50%"}}>
+              <i className="fas fa-bell text-lg" style={{color: "gray"}}></i>
             </div>
           <div
             className="user_prof items-center gap-8 flex justify-between mr-4"
@@ -116,7 +116,7 @@ function Nav() {
               <Create
                 back={"#FFFF00"}
                 color={"#000000"}
-                place={"/creatorspace"}
+                place={"/createnft"}
               />
             </div>
             <div className="w-2/3 mx-auto mt-3 " style={{display:"flex",alignItems: "center",flexDirection:"column"}}>
@@ -269,7 +269,7 @@ function Nav() {
             style={{ display: smallSearch ? "none" : "flex" }}
           >
             <div
-              className="p-2 mr-8 ml-8 sm:mx-4 roundSearch sm:hidden"
+              className="p-2 mr-4 ml-8 sm:mx-4 roundSearch sm:hidden"
               style={{
                 borderRadius: "50%",
                 display: smallSearch ? "none" : "block",
@@ -288,8 +288,8 @@ function Nav() {
                 setSideNav(!sidNav);
               }}
             ></i> */}
-            <div className="pl-1 pr-4">
-              <i className="fas fa-bell text-lg" style={{color: "gray"}}></i>
+            <div className="mr-4 p-2 roundSearch flex justify-center items-center" style={{borderRadius: "50%"}}>
+              <i className="fas fa-bell text-medium" style={{color: "gray"}}></i>
             </div>
 
             <div>
@@ -443,8 +443,8 @@ function Nav() {
                 <div className="my-4 font-extrabold" style={{fontSize: "15px"}}>Logout</div>
               </div>
                 <div className="flex justify-center">
-                  <Link to="/creatorspace" style={{marginTop:"10px"}}>
-                    <Create back={"#FFFF00"} color={"#000000"} place={"/"} />
+                  <Link to="/createnft" style={{marginTop:"10px"}}>
+                    <Create back={"#FFFF00"} color={"#000000"} place={"/createnft"} />
                   </Link>
                 </div>
               {/* <div className="flex justify-center items-center md:mt-4">

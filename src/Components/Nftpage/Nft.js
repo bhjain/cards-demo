@@ -22,7 +22,7 @@ function Nft() {
     <div className="pt-14 pb-8">
       <div
         style={{ height: "25rem" }}
-        className="main_img flex  mx-auto w-4/5 bg-black py-4 sm:w-full"
+        className="main_img flex  mx-auto w-4/5 bg-black sm:w-full"
       >
         <img
           className="mx-auto"
@@ -32,8 +32,8 @@ function Nft() {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <div className="w-4/5 flex mx-auto my-4 md:flex-col sm:w-full">
-        <div className="mx-auto">
+      <div className="w-4/5 flex mx-auto my-4 md:flex-col sm:w-full justify-center">
+        <div className="">
           <p
             className="text-sm"
             style={{ color: "#C2C2C2", fontWeight: "900" }}
@@ -46,7 +46,7 @@ function Nft() {
             <img className="w-6 h-6" src="/tweet_logo.png" alt="tweeter" />
           </div>
         </div>
-        <div className="mx-auto text-center pt-8">
+        <div className="mx-auto text-center pt-8 ">
           <h2 className="font-bold" style={{ fontSize: "2rem" }}>
             {NftData?.heading}
           </h2>
@@ -64,7 +64,7 @@ function Nft() {
         </div>
         <div className="">
           <div className="right w-5/5 mb-6 md:flex md:w-full md:items-center md:justify-around ">
-            <div className="Owner flex justify-center  items-center gap-3">
+            <div className="Owner flex justify-center  items-center gap-3 my-2">
               <img
                 src={`/${NftData?.owner?.ownerimg}`}
                 alt=""
