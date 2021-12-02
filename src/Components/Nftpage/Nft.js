@@ -21,15 +21,16 @@ function Nft() {
   return (
     <div className="pt-14 pb-8">
       <div
-        style={{ height: "25rem" }}
-        className="main_img flex  mx-auto w-4/5 bg-black sm:w-full"
+        style={{ height: "25rem", boxShadow: "inset 0px 0px 200px rgba(0, 0, 0, 0.9)", borderRadius: "5px"}}
+        className="main_img flex  mx-auto w-4/5 sm:w-full relative"
       >
+        <div className="back" style={{position: "absolute", top: "0", left: "0", bottom: "0", right: "0", backgroundImage: `URL(/${NftData?.img})`, backgroundSize: "cover", filter: "blur(6px)", boxShadow: "inset 0px 0px 200px rgba(0, 0, 0, 0.9)"}}></div>
         <img
           className="mx-auto"
           src={`/${NftData?.img}`}
           //   src={NftData.img}
           alt=""
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "contain", filter: "blur(0px)"}}
         />
       </div>
       <div className="w-4/5 flex mx-auto my-4 md:flex-col sm:w-full justify-center">
