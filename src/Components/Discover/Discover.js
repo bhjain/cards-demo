@@ -150,17 +150,17 @@ function Discover() {
                     </div>
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Price <span className="text-sm font-extrabold">(In INR)</span></h2>
-                      <div className="gap-4 text-sm">
-                        <form action="" className="flex gap-4 justify-center items-center">
-                          <input className="w-1/5 py-2 px-3" type="text" placeholder="Min" style={{border: "1px solid black", borderRadius: "20px"}} />
-                          <p className="font-bold" style={{color: "gray"}}>to</p>
-                          <input className="w-1/5 py-2 px-3" type="text" placeholder="Max" style={{border: "1px solid black", borderRadius: "20px"}} />
+                      <div className="gap-4 text-sm flex">
+                        <form action="" className="flex gap-4 justify-left items-center">
+                          <input className="w-1/5 py-2 px-3" type="text" placeholder="Min" style={{borderRadius: "20px", backgroundColor: "#F3F3F3"}} />
+                          {/* <p className="font-bold" style={{color: "gray"}}>to</p> */}
+                          <input className="w-1/5 py-2 px-3" type="text" placeholder="Max" style={{borderRadius: "20px", backgroundColor: "#F3F3F3"}} />
+                          <div className="flex justify-center">
+                            <button className="py-1 px-4 my-2 mx-2" style={{backgroundColor: "#FFFF00", borderRadius: "20px", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}}>Apply</button>
+                          </div>
                         </form>
                         {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Min</button> */}
                         {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Max</button> */}
-                        <div className="flex justify-center">
-                          <button className="filter_btn py-1 px-4 my-2 mx-2">Apply</button>
-                        </div>
                       </div>
                     </div>
                     <div className="my-4">
@@ -211,16 +211,16 @@ function Discover() {
                     </div>
                     <div className="my-4">
                       <h2 className="pb-2 text-xl" style={{fontWeight: "900"}}>Price <span className="text-sm font-extrabold">(In INR)</span></h2>
-                      <div className="gap-4 text-sm">
-                        <form action="" className="flex gap-4">
-                          <input className="w-2/5 py-1 px-2" type="text" placeholder="Min" style={{border: "1px solid black", borderRadius: "20px"}} />
-                          <p>to</p>
-                          <input className="w-2/5 py-1 px-2" type="text" placeholder="Max" style={{border: "1px solid black", borderRadius: "20px"}} />
+                      <div className="gap-4 text-sm mx-auto">
+                        <form action="" className="flex gap-4 justify-center">
+                          <input className="w-2/5 py-1 px-2" type="text" placeholder="Min"  style={{borderRadius: "20px", backgroundColor: "#F3F3F3"}} />
+                          {/* <p>to</p> */}
+                          <input className="w-2/5 py-1 px-2" type="text" placeholder="Max"  style={{borderRadius: "20px", backgroundColor: "#F3F3F3"}} />
                         </form>
                         {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Min</button> */}
                         {/* <button className="filter_btn py-1 px-4 my-2 mx-2">Max</button> */}
                         <div className="flex justify-center">
-                          <button className="filter_btn py-1 px-4 my-2 mx-2">Apply</button>
+                          <button className="py-1 px-4 my-2 mx-2" style={{backgroundColor: "#FFFF00", borderRadius: "20px", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}}>Apply</button>
                         </div>
                       </div>
                     </div>

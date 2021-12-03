@@ -33,7 +33,7 @@ function Nav() {
 
   function measureScroll(){
     setScroll(window.scrollY);
-    console.log(scroll);
+    // console.log(scroll);
   }
   window.addEventListener("scroll", measureScroll);
   return (
